@@ -2,7 +2,7 @@
 layout: post
 title:  "Altahhanyara : Top Culinary Business Opportunities in Liechtenstein"
 author: admin
-categories: [blog]
+categories: [altahhanyara,blog,yara altahan,]
 image: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhLINlVlvBxuugZaOfy7eCVGJx9IpV3WJEOyyiinP4iYg1ihqcJ_YZy8aOR1yflxb_r1PgczxL2SJS7o1KIgTS8zdcpb4RfY9XvyUrK1fnVYiGJ5eAU8oME2vNB7qKMZpeIqlPFUl2N7ozEhf3cth06PvShrye94hk36IfHdPOrF2rHjNRgNR_OagVNREmP/s1600/Altahhanyara%20Yara%20Altahan%203.jpg
 ---
 
