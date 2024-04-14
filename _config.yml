@@ -1,7 +1,7 @@
 # Site
 name: "Dorsikret"
 title: "Dorsikret"
-description: "My blog"
+description: "Dorsikret is a blog about beauty and how to care for your face and body to be beautiful"
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/logo.png'
 baseurl: /
