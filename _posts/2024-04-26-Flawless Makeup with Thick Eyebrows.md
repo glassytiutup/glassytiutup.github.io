@@ -8,7 +8,6 @@ image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhA3mrw_VH-etX
 ---
 
 
-
 <p>Having thick eyebrows can be a blessing as they frame and enhance your facial features. However, when it comes to applying makeup, it's important to know the right techniques to ensure your brows look well-groomed and balanced. To help you achieve flawless makeup with thick eyebrows, we have compiled a list of tips and tricks that will take your eyebrow game to the next level. From prepping your brows to choosing the right products and shaping them, we've got you covered.</p>
 <h2>Prepping your brows before applying makeup</h2>
 <ol>
