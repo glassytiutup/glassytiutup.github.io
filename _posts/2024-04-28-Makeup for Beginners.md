@@ -7,6 +7,7 @@ categories: [blog]
 image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhM1WcTWERB0F5g_bRTAA1HA3JRFK7MzPCjgpvh8KBhKjSgLvYA-OX0ZnuAt7bsOXp55EwMaTZxOESCAyH94RbcFC6xmpnWIk7uS1tjKQex5sJAWyk4v1WgvE5XkIbCtTvfgge2aZjzZnhyphenhyphen2FD-itnGU8TUeBKcXdTgp6NvvjwIDQQ4LLe-Zrg8ArwZkSw/s1600/20240424_104153.jpg"
 ---
 
+
 <p>Applying makeup is an art that can enhance your natural beauty and boost your confidence. However, for beginners, it may seem overwhelming with the plethora of products and techniques available. Fear not, as this article will guide you through the basic steps of applying makeup, simplifying the process and helping you achieve a flawless look. From preparing your skin to adding finishing touches, these steps will ensure a professional and polished appearance.</p>
 <h2>Preparing Your Skin</h2>
 <ol>
