@@ -247,7 +247,9 @@ h1, h2, h3, h4, h5, a {
 
     <!-- Header -->
     <header id="header">
-      <b>  <h1>Beauty Blog</h1> </b>
+      <b>  <h1><a href="/">
+  {{ site.name }}
+  </a></h1> </b>
         <button id="toggle-btn"><i class="fas fa-bars"></i></button>
     </header>
 
@@ -317,8 +319,9 @@ h1, h2, h3, h4, h5, a {
             </li>
         </ul>
         <br />
-
+<div style="padding:5%">
                 {% include search-lunr.html %}
+                </div>
 
         <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
     </nav>
