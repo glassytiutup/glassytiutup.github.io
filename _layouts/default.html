@@ -24,7 +24,7 @@ h1, h2, h3, h4, h5, a {
             z-index: 100;
             position: fixed;
             top: 40;
-            left: 250px; /* Move sidebar off-screen initially */
+            right: +100%; /* Move sidebar off-screen initially */
             overflow-y: auto;
             height: 100vh;
         }
@@ -101,8 +101,8 @@ h1, h2, h3, h4, h5, a {
 
         #toggle-btn {
             position: absolute;
-            right: 20px;
-            top: 10px;
+            left: 15px;
+            top: 15px;
             background: none;
             border: none;
             font-size: 24px;
@@ -111,13 +111,13 @@ h1, h2, h3, h4, h5, a {
         }
 
         /* Media query for responsiveness */
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 100%) {
             #beauty-sidebar {
                 width: 100%; /* Full width of sidebar on smaller screens */
-                left: -100%; /* Move sidebar off-screen initially */
+                right: +100%; /* Move sidebar off-screen initially */
             }
             #beauty-sidebar.open {
-                transform: translateX(100%); /* Bring sidebar into view when open */
+                transform: translateX(0); /* Bring sidebar into view when open */
             }
         }
     </style>
