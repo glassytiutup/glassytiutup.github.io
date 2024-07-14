@@ -1,240 +1,377 @@
 <!DOCTYPE html>
-<html lang="en" >
-	
+<html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty Blog Sidebar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+h1, h2, h3, h4, h5, a {
+  color: #800080; /* Warna ungu */
+}
+        /* Sidebar styles */
+        #beauty-sidebar {
+            width: 250px;
+            background-color: #fff; /* Pink */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            z-index: 100;
+            position: fixed;
+            top: 40;
+            left: 250px; /* Move sidebar off-screen initially */
+            overflow-y: auto;
+            height: 100vh;
+        }
 
-<link rel="icon" href="{{ site.baseurl }}/assets/images/logo.png"/>
+        #beauty-sidebar.open {
+            transform: translateX(250px); /* Bring sidebar into view when open */
+        }
 
+        #beauty-sidebar ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            }
 
+        #beauty-sidebar ul li {
+            position: relative;
+        }
 
+        .dropdown-btn {
+            display: block;
+            background: none;
+            border: none;
+            padding: 15px 20px;
+            text-align: left;
+            width: 100%;
+            font-size: 16px;
+            color: #333;
+            cursor: pointer;
+            outline: none;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .dropdown-btn:hover {
+            background-color: #e6bedd; /* Lighter purple */
+            color: #555;
+        }
+
+        .dropdown-container {
+            display: none;
+            padding-left: 20px;
+        }
+
+        .dropdown-container a {
+            padding: 5px;
+            border: solid, 1px, white;
+            display: block;
+            color: #fff;
+            background: #800080;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .dropdown-container a:hover {
+            background-color: #f9f9f9;
+            color: #555;
+        }
+
+        /* Header styles */
+        #header {
+            background-color: #fff;
+            color: #800080; /* Dark purple */
+            padding: 5px;
+            text-align: center;
+            position: fixed;
+            top: 0px;
+            width: 100%;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 101;
+        }
+
+        #header h1 {
+            margin: 0;
+        }
+
+        #toggle-btn {
+            position: absolute;
+            right: 20px;
+            top: 10px;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #800080; /* Dark purple */
+        }
+
+        /* Media query for responsiveness */
+        @media screen and (max-width: 768px) {
+            #beauty-sidebar {
+                width: 100%; /* Full width of sidebar on smaller screens */
+                left: -100%; /* Move sidebar off-screen initially */
+            }
+            #beauty-sidebar.open {
+                transform: translateX(100%); /* Bring sidebar into view when open */
+            }
+        }
+    </style>
+    
+    <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function() {
+        var lazyElements = document.querySelectorAll("img, iframe, div, details, ol, ul, li, b\\:section, b\\:widget, b\\:include, b\\:if, b\\:with, button, script, noscript, video, p");
+        lazyElements.forEach(function(element) {
+            element.setAttribute("loading", "lazy");
+        });
+    });
+</script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+  
+  
+  
 {% seo %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "{{ page.title }}",
+  "description": "{{ page.title }}",
+  "thumbnailUrl": "{% if page.image contains "://" %}{{ page.image }}{% else %}{{ site.baseurl }}/{{ page.image }}{% endif %}",
+  "uploadDate": "{{ page.date }}",
+  "duration": "PT55M47S",
+  "contentUrl": "https://video.twimg.com/ext_tw_video/1143674758455648262/pu/vid/320x630/fhxIIe2IBzgv6J7T.mp4"
+}
+</script>
+
+	<!--breadcrumb-->
+		<script type="application/ld+json">
+{
+	"@context": "http://schema.org/",
+	"@type": "BreadcrumbList",
+	"itemListElement": [
+		{
+			"@type": "ListItem",
+			"position": 1,
+			"name": "photo",
+			"item": "{{ site.url }}{{ site.baseurl }}{{ page.url }}?photo"
+		},
+		{
+			"@type": "ListItem",
+			"position": 2,
+			"name": "video",
+			"item": "{{ site.url }}{{ site.baseurl }}{{ page.url }}?video"
+		},
+		{
+			"@type": "ListItem",
+			"position": 3,
+			"name": "leaked contents",
+			"item": "{{ site.url }}{{ site.baseurl }}{{ page.url }}?leaked"
+		},
+		{
+			"@type": "ListItem",
+			"position": 4,
+			"name": "more collections",
+			"item": "{{ site.url }}{{ site.baseurl }}{{ page.url }}?collection"
+		}
+	]
+}
+</script><!--breadcrumb-->
+	
+	<!-- sitelinks -->
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org/",
+	"@type": "WebSite",
+	"url": "{{ site.url }}",
+	"potentialAction": {
+		"@type": "SearchAction",
+		"target": "{{ site.url }}{{ site.baseurl }}/?q={search_term_string}",
+		"query-input": "required name=search_term_string"
+	}
+}
+</script><!-- sitelinks -->
+	
+	
+	<!-- how to -->
+	<script type="application/ld+json">
+{
+	"@context": "http://schema.org/",
+	"@type": "HowTo",
+	"name": "{{ page.title }}",
+	"description": "{{ page.title }}",
+	"image": "{% if page.image contains "://" %}{{ page.image }}{% else %}{{ site.baseurl }}/{{ page.image }}{% endif %}",
+	"totalTime": "PT57M",
+	"estimatedCost": {
+		"@type": "MonetaryAmount",
+		"currency": "USD",
+		"value": "2"
+	},
+	"step": [
+		{
+			"@type": "HowToStep",
+			"name": "find download link",
+			"text": "find download link on the page",
+			"image": "{% if page.image contains "://" %}{{ page.image }}{% else %}{{ site.baseurl }}/{{ page.image }}{% endif %}",
+			"url": "{% if page.image contains "://" %}{{ page.image }}{% else %}{{ site.baseurl }}/{{ page.image }}{% endif %}"
+		},
+		{
+			"@type": "HowToStep",
+			"name": "click download button",
+			"text": "click download button on the page",
+			"image": "{% if page.image contains "://" %}{{ page.image }}{% else %}{{ site.baseurl }}/{{ page.image }}{% endif %}",
+			"url": "{% if page.image contains "://" %}{{ page.image }}{% else %}{{ site.baseurl }}/{{ page.image }}{% endif %}"
+		}
+	]
+}
+</script><!-- how to -->
+
+
+
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"/>
     
-<link href="{{ site.baseurl }}/assets/css/screen.css" rel="stylesheet"/>
+<link href="{{ site.url }}/assets/css/screen.css" rel="stylesheet"/>
 
-<link href="{{ site.baseurl }}/assets/css/main.css" rel="stylesheet"/>
+<link href="{{ site.url }}/assets/css/main.css" rel="stylesheet"/>
 
-<script src="{{ site.baseurl }}/assets/js/jquery.min.js"></script>
+<script src="{{ site.url }}/assets/js/jquery.min.js"></script>
 
-<meta name="yandex-verification" content="e8a27cf9fc3cc594" />
-	
-	
-	<link href="{{ site.baseurl }}/assets/css/beauty.css rel="stylesheet"/>
-	
-
-	
 </head>
+<body>
 
+    <!-- Header -->
+    <header id="header">
+      <b>  <h1>Beauty Blog</h1> </b>
+        <button id="toggle-btn"><i class="fas fa-bars"></i></button>
+    </header>
 
-<body class="{{layout}}">
-	
-
-
-	
-
-
-
-
-	
-	<!-- defer loading of font and font awesome -->
-	<noscript id="deferred-styles">
-		<link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet"/>
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"/>
-	</noscript>
-
-
-<!-- Begin Menu Navigation
-================================================== -->
-<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
-
-    <div class="container pr-0">
-
-    <!-- Begin Logo -->
-    <a class="navbar-brand" href="{{ site.baseurl }}/">
-    <img src="{{ site.baseurl }}/{{ site.logo }}" alt="{{ site.name }}"/>
-    </a>
-    <!-- End Logo -->
-
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarMediumish">
-
-        <!-- Begin Menu -->
-
-            <ul class="navbar-nav ml-auto" style="width:100%; height:100%; overflow:auto;>
-
-<nav id="beauty-sidebar">
-  <ul>
-    <li>
-      <button class="dropdown-btn">Makeup <i class="fa fa-caret-down"></i></button>
-      <div class="dropdown-container">
-        <a href="#">Basic Makeup Tutorials</a>
-        <a href="#">Contouring and Highlighting Techniques</a>
-        <a href="#">Eye Makeup</a>
-        <a href="#">Lip Makeup</a>
-        <a href="#">Special Occasion Makeup</a>
-      </div>
-    </li>
-    <li>
-      <button class="dropdown-btn">Hair Care <i class="fa fa-caret-down"></i></button>
-      <div class="dropdown-container">
-        <a href="#">Hairstyle Tutorials</a>
-        <a href="#">Using Hair Styling Tools</a>
-        <a href="#">Tips for Dry and Damaged Hair</a>
-        <a href="#">Natural Hair Care</a>
-        <a href="#">Hairstyles for Different Occasions</a>
-      </div>
-    </li>
-    <li>
-      <button class="dropdown-btn">Skin Care <i class="fa fa-caret-down"></i></button>
-      <div class="dropdown-container">
-        <a href="#">Morning and Night Skin Care Routines</a>
-        <a href="#">How to Treat Acne</a>
-        <a href="#">Anti-Aging Tips</a>
-        <a href="#">DIY Face Masks</a>
-        <a href="#">Proper Exfoliation</a>
-      </div>
-    </li>
-    <li>
-      <button class="dropdown-btn">Body Care <i class="fa fa-caret-down"></i></button>
-      <div class="dropdown-container">
-        <a href="#">How to Reduce Cellulite</a>
-        <a href="#">Tips for Brightening Body Skin</a>
-        <a href="#">Hand and Nail Care</a>
-        <a href="#">Foot Care</a>
-        <a href="#">Natural Body Care</a>
-      </div>
-    </li>
-    <li>
-      <button class="dropdown-btn">Healthy Lifestyle for Beauty <i class="fa fa-caret-down"></i></button>
-      <div class="dropdown-container">
-        <a href="#">Diet for Healthy Skin</a>
-        <a href="#">Exercise for Beauty</a>
-        <a href="#">Benefits of Yoga for Beauty</a>
-        <a href="#">Importance of Quality Sleep</a>
-        <a href="#">Relaxation and Stress Relief Tips</a>
-      </div>
-    </li>
-    <li>
-      <button class="dropdown-btn">DIY and Creative Tips <i class="fa fa-caret-down"></i></button>
-      <div class="dropdown-container">
-        <a href="#">DIY Beauty Products</a>
-        <a href="#">Budget Beauty Tips</a>
-        <a href="#">Quick Beauty Fixes</a>
-        <a href="#">DIY Beauty Gift Ideas</a>
-        <a href="#">Using Kitchen Ingredients for Beauty</a>
-      </div>
-    </li>
-  </ul>
-</nav>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    var dropdowns = document.querySelectorAll('.dropdown-btn');
-    dropdowns.forEach(function(dropdown) {
-      dropdown.addEventListener('click', function() {
-        this.classList.toggle('active');
-        var dropdownContent = this.nextElementSibling;
-        if (dropdownContent.style.display === 'block') {
-          dropdownContent.style.display = 'none';
-        } else {
-          dropdownContent.style.display = 'block';
-        }
-      });
-    });
-  });
-</script>
-<hr />
-
-                {% if page.url == "/" %}
-                <li class="nav-item active">
-                {% else %}
-                <li class="nav-item">
-                {% endif %}
-                <a class="nav-link" href="{{ site.baseurl }}/">Home</a>
-                </li>
-
-                <li class="nav-item">
-                <a class="nav-link" href="{{ site.baseurl }}/terms-and-conditions">Terms and Conditions</a>
-                </li>
-		    
-		    <li class="nav-item">
-                <a class="nav-link" href="{{ site.baseurl }}/privacy-policy">Privacy Policy</a>
-                </li>
-
-		    <br />
+    <!-- Sidebar -->
+    <nav id="beauty-sidebar">
+    	<br />
+        <ul>
+            <li>
+                <button class="dropdown-btn">Makeup <i class="fa fa-caret-down"></i></button>
+                <div class="dropdown-container">
+                    <a href="#">Basic Makeup Tutorials</a>
+                    <a href="#">Contouring and Highlighting Techniques</a>
+                    <a href="#">Eye Makeup</a>
+                    <a href="#">Lip Makeup</a>
+                    <a href="#">Special Occasion Makeup</a>
+                </div>
+            </li>
+            <li>
+                <button class="dropdown-btn">Hair Care <i class="fa fa-caret-down"></i></button>
+                <div class="dropdown-container">
+                    <a href="#">Hairstyle Tutorials</a>
+                    <a href="#">Using Hair Styling Tools</a>
+                    <a href="#">Tips for Dry and Damaged Hair</a>
+                    <a href="#">Natural Hair Care</a>
+                    <a href="#">Hairstyles for Different Occasions</a>
+                </div>
+            </li>
+            <li>
+                <button class="dropdown-btn">Skin Care <i class="fa fa-caret-down"></i></button>
+                <div class="dropdown-container">
+                    <a href="#">Morning and Night Skin Care Routines</a>
+                    <a href="#">How to Treat Acne</a>
+                    <a href="#">Anti-Aging Tips</a>
+                    <a href="#">DIY Face Masks</a>
+                    <a href="#">Proper Exfoliation</a>
+                </div>
+            </li>
+            <li>
+                <button class="dropdown-btn">Body Care <i class="fa fa-caret-down"></i></button>
+                <div class="dropdown-container">
+                    <a href="#">How to Reduce Cellulite</a>
+                    <a href="#">Tips for Brightening Body Skin</a>
+                    <a href="#">Hand and Nail Care</a>
+                    <a href="#">Foot Care</a>
+                    <a href="#">Natural Body Care</a>
+                </div>
+            </li>
+            <li>
+                <button class="dropdown-btn">Healthy Lifestyle for Beauty <i class="fa fa-caret-down"></i></button>
+                <div class="dropdown-container">
+                    <a href="#">Diet for Healthy Skin</a>
+                    <a href="#">Exercise for Beauty</a>
+                    <a href="#">Benefits of Yoga for Beauty</a>
+                    <a href="#">Importance of Quality Sleep</a>
+                    <a href="#">Relaxation and Stress Relief Tips</a>
+                </div>
+            </li>
+            <li>
+                <button class="dropdown-btn">DIY and Creative Tips <i class="fa fa-caret-down"></i></button>
+                <div class="dropdown-container">
+                    <a href="#">DIY Beauty Products</a>
+                    <a href="#">Budget Beauty Tips</a>
+                    <a href="#">Quick Beauty Fixes</a>
+                    <a href="#">DIY Beauty Gift Ideas</a>
+                    <a href="#">Using Kitchen Ingredients for Beauty</a>
+                </div>
+            </li>
+        </ul>
+        <br />
 
                 {% include search-lunr.html %}
 
-            </ul>
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    </nav>
 
-        <!-- End Menu -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var toggleBtn = document.getElementById('toggle-btn');
+            var sidebar = document.getElementById('beauty-sidebar');
+            var dropdowns = document.querySelectorAll('.dropdown-btn');
 
-    </div>
+            toggleBtn.addEventListener('click', function() {
+                sidebar.classList.toggle('open');
+            });
 
-    </div>
-</nav>
-<!-- End Navigation
-================================================== -->
+            dropdowns.forEach(function(dropdown) {
+                dropdown.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                    var dropdownContent = this.nextElementSibling;
+                    if (dropdownContent.style.display === 'block') {
+                        dropdownContent.style.display = 'none';
+                    } else {
+                        dropdownContent.style.display = 'block';
+                    }
+                });
+            });
+        });
+    </script>
 
-<div class="site-content">
+     	<noscript id="deferred-styles">
+		<link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet"/>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"/>
+	</noscript>
+            
+            <div class="site-content">
 
 <div class="container">
-
-<!-- Site Title
-================================================== -->
- 
-
-	
-	
-	
-	
-	
-	
-
-<!-- Content
-================================================== -->
-<div class="main-content">
-	
-	
-    {{ content }}
-</div>
-
-	
-{% if site.mailchimp-list %}
-<!-- Bottom Alert Bar
-================================================== -->
-<!-- <div class="alertbar">
-	<div class="container text-center">
-		<span><img src="{{ site.baseurl }}/{{ site.logo }}" alt="{{site.title}}"> &nbsp; Never miss a <b>story</b> from us, subscribe to our newsletter</span>
-        <form action="{{site.mailchimp-list}}" method="post" name="mc-embedded-subscribe-form" class="wj-contact-form validate" target="_blank" novalidate>
-            <div class="mc-field-group">
-            <input type="email" placeholder="Email" name="EMAIL" class="required email" id="mce-EMAIL" autocomplete="on" required>
-            <input type="submit" value="Subscribe" name="subscribe" class="heart">
-            </div>
-        </form>
-	</div>
-</div> -->
-{% endif %}
-    
-</div>
-
-
-	<a id="show_id" onclick="document.getElementById('spoiler_id').style.display=''; document.getElementById('show_id').style.display='none';"></a><span id="spoiler_id" style="display: none;"><a class="link" onclick="document.getElementById('spoiler_id').style.display='none'; document.getElementById('show_id').style.display='';"></a>
+            <div class="main-content">
+      {{ content }}
+      </div>     </div>
+        </div>
+        </div>
+    </div>
+<a id="show_id" onclick="document.getElementById('spoiler_id').style.display=''; document.getElementById('show_id').style.display='none';"></a><span id="spoiler_id" style="display: none;"><a class="link" onclick="document.getElementById('spoiler_id').style.display='none'; document.getElementById('show_id').style.display='';"></a>
 <div style="background-color: rgba(0, 0, 0, 0); margin: 1px;">
 <div class="smallfont"><i><span style="font-size: 16px; font-weight: bold; margin-right: 3px;"></span></i><input onclick="if (this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display != '') { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = ''; this.innerText = ''; this.value = 'Hide'; } else { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = 'none'; this.innerText = ''; this.value = 'new posts'; }" style="background-color: #00000000; font-size: 16px; width: auto;" type="button" value="new posts" />
 </div>
 <div class="alt2" style="background-color: rgba(255, 255, 255, 0); margin: 0px; padding: 0px;">
 <div style="display: none;" loading="lazy">
 
-<!-- Categories Jumbotron
+
+	<!-- Categories Jumbotron
 ================================================== -->
- <div class="jumbotron fortags" >
+<div class="jumbotron fortags" >
 	<div class="d-md-flex h-100">
 		<div class="col-md-4 transpdark align-self-center text-center h-100">
             <div class="d-md-flex align-items-center justify-content-center h-100">
@@ -256,118 +393,43 @@
 		</div>
 	</div>
 </div>
+
+	</div></div></div></span>
 	
-</div></div></div></span>
-<!-- Begin Footer
-================================================== -->
 <footer class="footer">
     <div class="container">
-     
+    
 
-	    
-	
-    	    <div class="row">
+    
+        <div class="row">
             <div class="col-md-6 col-sm-6 text-center text-lg-left">
-               Email: dorsikret@gmail.com
-		    <br /> Copyright © {{ site.time | date: "%Y" }} {{ site.name }} 
+      <a href="/terms-and-conditions">Terms and Conditions</a>&nbsp; •&nbsp;<a href="/privacy-policy">Privacy Policy</a>
+		    <br />
+		    Copyright © {{ site.time | date: "%Y" }}&nbsp;-&nbsp;<a href="{{ site.url }}">{{ site.name }}</a>
+		
             </div>
-            <br />
+            
         </div>
     </div>
 </footer>
-<!-- End Footer
-================================================== -->
 
-</div> <!-- /.site-content -->
 
-<!-- Scripts
-================================================== -->
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
 
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 
-<script src="{{ site.baseurl }}/assets/js/mediumish.js"></script>
+<script src="{{ site.url }}/assets/js/mediumish.js"></script>
 
 {% if site.lazyimages == "enabled" %}
-<script src="{{ site.baseurl }}/assets/js/lazyload.js"></script>
+<script src="{{ site.url }}/assets/js/lazyload.js"></script>
 {% endif %}
 
-<script src="{{ site.baseurl }}/assets/js/ie10-viewport-bug-workaround.js"></script> 
+<script src="{{ site.url }}/assets/js/ie10-viewport-bug-workaround.js"></script> 
 
 {% if page.layout == 'post' %}
 <script id="dsq-count-scr" src="//{{site.disqus}}.disqus.com/count.js"></script>
 {% endif %}
-
-
-
-
-
-<div id='flo9a2243tads' style='width:100%;margin:auto; text-align:center;float:none;overflow:hidden; display:scroll;position:fixed; bottom:0%;z-index:9999'>
-         <div><a id='close-flo9a2243tads' onclick='document.getElementById(&apos;flo9a2243tads&apos;).style.display = &apos;none&apos;;' style='cursor:pointer;'><img alt='close' src='https://3.bp.blogspot.com/-ZZSacDHLWlM/VhvlKTMjbLI/AAAAAAAAF2M/UDzU4rrvcaI/s1600/btn_close.gif' title='close button'/></a></div>
-    <div style='background-color:#fff; text-align:center;display:block;max-width:100%;height:auto;overflow:auto;margin:auto'>
-	    
-<center style="height:50px; overflow:auto;">
-<script type="text/javascript">
-	atOptions = {
-		'key' : '8db66ea5bd74fc8d9af90c81e20ee24a',
-		'format' : 'iframe',
-		'height' : 50,
-		'width' : 320,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//evendisciplineseedlings.com/8db66ea5bd74fc8d9af90c81e20ee24a/invoke.js"></script><br /><br /><br />
-<script type="text/javascript"> 	atOptions = { 		'key' : '40b2f907134f908eb18400d2dfd189ff', 		'format' : 'iframe', 		'height' : 60, 		'width' : 468, 		'params' : {} 	}; </script> <script type="text/javascript" src="//evendisciplineseedlings.com/40b2f907134f908eb18400d2dfd189ff/invoke.js"></script>
-<script type="text/javascript"> 	atOptions = { 		'key' : 'fcf0e804a35e713abd5e3dc9c006e824', 		'format' : 'iframe', 		'height' : 300, 		'width' : 160, 		'params' : {} 	}; </script> <script type="text/javascript" src="//evendisciplineseedlings.com/fcf0e804a35e713abd5e3dc9c006e824/invoke.js"></script>
-<script type="text/javascript"> 	atOptions = { 		'key' : '9d0cc86edd7dece6c73031b15b738fd4', 		'format' : 'iframe', 		'height' : 600, 		'width' : 160, 		'params' : {} 	}; </script> <script type="text/javascript" src="//evendisciplineseedlings.com/9d0cc86edd7dece6c73031b15b738fd4/invoke.js"></script>
-<script type="text/javascript"> 	atOptions = { 		'key' : '7eb90964184fc1cb015228c11a287253', 		'format' : 'iframe', 		'height' : 90, 		'width' : 728, 		'params' : {} 	}; </script> <script type="text/javascript" src="//evendisciplineseedlings.com/7eb90964184fc1cb015228c11a287253/invoke.js"></script>
-<script type="text/javascript"> 	atOptions = { 		'key' : '43dedfae0a77f8561f6ba63ccfd0832d', 		'format' : 'iframe', 		'height' : 250, 		'width' : 300, 		'params' : {} 	}; </script> <script type="text/javascript" src="//evendisciplineseedlings.com/43dedfae0a77f8561f6ba63ccfd0832d/invoke.js"></script>
-<script type="text/javascript"> 	atOptions = { 		'key' : '2a53c1ef9ec9e4253172746f425bf7e6', 		'format' : 'iframe', 		'height' : 50, 		'width' : 320, 		'params' : {} 	}; </script> <script type="text/javascript" src="//scheduleginnarcotic.com/2a53c1ef9ec9e4253172746f425bf7e6/invoke.js"></script>
-<script type="text/javascript">
-	atOptions = {
-		'key' : '3ef67ee2d77d2efa1c5e6fb11b574314',
-		'format' : 'iframe',
-		'height' : 300,
-		'width' : 160,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//scheduleginnarcotic.com/3ef67ee2d77d2efa1c5e6fb11b574314/invoke.js"></script>
-<script type="text/javascript">
-	atOptions = {
-		'key' : '1665e12a61c3760d33ca13dd09ea9177',
-		'format' : 'iframe',
-		'height' : 60,
-		'width' : 468,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//scheduleginnarcotic.com/1665e12a61c3760d33ca13dd09ea9177/invoke.js"></script>
-<script type="text/javascript"> 	atOptions = { 		'key' : 'ce8b8cf0289c66b44f4837bb07af6961', 		'format' : 'iframe', 		'height' : 600, 		'width' : 160, 		'params' : {} 	}; </script> <script type="text/javascript" src="//scheduleginnarcotic.com/ce8b8cf0289c66b44f4837bb07af6961/invoke.js"></script>
-<script type="text/javascript">
-	atOptions = {
-		'key' : '141840ecb478e7a1ee1a067294e2203e',
-		'format' : 'iframe',
-		'height' : 250,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//scheduleginnarcotic.com/141840ecb478e7a1ee1a067294e2203e/invoke.js"></script>
-<script type="text/javascript"> 	atOptions = { 		'key' : '6b7f6e10bfba5273d37ce8486a175d93', 		'format' : 'iframe', 		'height' : 90, 		'width' : 728, 		'params' : {} 	}; </script> <script type="text/javascript" src="//scheduleginnarcotic.com/6b7f6e10bfba5273d37ce8486a175d93/invoke.js"></script>
-
-
-
-
-
-</center></div></div>
-<script type="text/javascript">
-   var uid = '342117';
-   var wid = '713145';
-   var pop_tag = document.createElement('script');pop_tag.src='//cdn.popcash.net/show.js';document.body.appendChild(pop_tag);
-   pop_tag.onerror = function() {pop_tag = document.createElement('script');pop_tag.src='//cdn2.popcash.net/show.js';document.body.appendChild(pop_tag)};
-</script>
-
+    
 </body>
 </html>
+
