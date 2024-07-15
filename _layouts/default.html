@@ -6,6 +6,42 @@
     
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+    #indri-floating-ad {
+        position: fixed;
+        bottom: 10px;
+        right: 5%;
+        max-width: 370px; /* Lebar maksimal sesuai dengan layar */
+        background-color: #fff;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        z-index: 1000; /* Pastikan lebih tinggi dari konten lain */
+    }
+
+    #indri-ad-content {
+        font-size: 16px;
+        color: #333;
+        line-height: 1.5;
+        overflow: auto;
+        height: 250px;
+    }
+
+    #indri-close-ad {
+        position: absolute;
+        top: 5px;
+        right:5px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 18px; /* Ukuran font lebih besar */
+        color: #666;
+    }
+</style>
+
+    
     <style>
         /* General styles */
         body {
@@ -619,39 +655,6 @@ var script_url=HOST+"/feeds/posts/default";bcd140526_index_label&&(script_url+="
 
 
 
-<style>
-    #indri-floating-ad {
-        position: fixed;
-        bottom: 10px;
-        right: 5%;
-        max-width: 370px; /* Lebar maksimal sesuai dengan layar */
-        background-color: #fff;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-        z-index: 1000; /* Pastikan lebih tinggi dari konten lain */
-    }
-
-    #indri-ad-content {
-        font-size: 16px;
-        color: #333;
-        line-height: 1.5;
-        overflow: auto;
-        height: 250px;
-    }
-
-    #indri-close-ad {
-        position: absolute;
-        top: 5px;
-        right:5px;
-        background: none;
-        border: none;
-        cursor: pointer;
-        font-size: 18px; /* Ukuran font lebih besar */
-        color: #666;
-    }
-</style>
 
 
 <div id="indri-floating-ad">
@@ -800,7 +803,7 @@ var script_url=HOST+"/feeds/posts/default";bcd140526_index_label&&(script_url+="
 </script>
 
 
-	<footer style="padding:10px; max-width:80%;" claas="ikah">
+	<footer style="padding:10px; width:100%;" claas="ikah">
 <center>	
 &nbsp          &nbsp  <a href="/terms-and-conditions">Terms and Conditions</a>&nbsp; •&nbsp;<a href="/privacy-policy">Privacy Policy</a><br />Copyright © {{ site.time | date: "%Y" }}&nbsp;-&nbsp;<a href="{{ site.url }}">{{ site.name }}</a>
 </center>
