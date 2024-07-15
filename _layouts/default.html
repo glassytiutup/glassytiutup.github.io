@@ -586,6 +586,7 @@ var script_url=HOST+"/feeds/posts/default";bcd140526_index_label&&(script_url+="
 
 </script>
 
+</div></div>
 
       <link rel="stylesheet" href="https://cdn.fluidplayer.com/v3/current/fluidplayer.min.css" type="text/css" />
 <script src="https://cdn.fluidplayer.com/v3/current/fluidplayer.min.js"></script>
@@ -615,7 +616,7 @@ var script_url=HOST+"/feeds/posts/default";bcd140526_index_label&&(script_url+="
 		"allowDownload": true,
 		"playButtonShowing": true,
 		"fillToContainer": true,
-		"posterImage": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi4p-9WEn86h1iGg_ALNbM4ehXMNf3f1-Mve1PZamGyQvPp4ouqDGPadmBZYB29f-VRNaEvuwyCpD-ksE1BqhsSpf8AMPong8ZfT6wLIpymUEjjQdf_4yxviPsTq8L-25gGZ8EHSbxMPOf0thZAbH_hPdf_c3oTKeegSizO3YwgeoVHZkPrkUdME6MKNRaD/s1600/XooLcj6roDVJkr7E.jpeg"
+		"posterImage": "{% if page.image contains "://" %}{{ page.image }}{% else %}{{ site.baseurl }}/{{ page.image }}{% endif %}"
 	},
 	"vastOptions": {
 	"adList": [
@@ -645,7 +646,7 @@ var script_url=HOST+"/feeds/posts/default";bcd140526_index_label&&(script_url+="
 </script>  
 <hr />
 
-</div></div>
+
 
  
 <footer>
