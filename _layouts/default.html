@@ -160,7 +160,7 @@
     
     <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", function() {
-        var lazyElements = document.querySelectorAll("img, iframe, div, details, ol, ul, li, b\\:section, b\\:widget, b\\:include, b\\:if, b\\:with, button, script, noscript, video, p");
+        var lazyElements = document.querySelectorAll("img, iframe, div, details, ol, nav, ul, li, b\\:section, b\\:widget, b\\:include, b\\:if, b\\:with, button, script, noscript, video, p");
         lazyElements.forEach(function(element) {
             element.setAttribute("loading", "lazy");
         });
@@ -288,6 +288,126 @@
   </a></h1> 
         <button id="toggle-btn"><i class="fas fa-bars"></i></button>
     </header>
+
+
+    <!-- Sidebar -->
+    <nav id="beauty-sidebar">
+    	<br />
+        <ul>
+            <li>
+                <button class="dropdown-btn">Makeup <i class="fa fa-caret-down"></i></button>
+                <div class="dropdown-container">
+                    <a href="#">Basic Makeup Tutorials</a>
+                    <a href="#">Contouring and Highlighting Techniques</a>
+                    <a href="#">Eye Makeup</a>
+                    <a href="#">Lip Makeup</a>
+                    <a href="#">Special Occasion Makeup</a>
+                </div>
+            </li>
+            <li>
+                <button class="dropdown-btn">Hair Care <i class="fa fa-caret-down"></i></button>
+                <div class="dropdown-container">
+                    <a href="#">Hairstyle Tutorials</a>
+                    <a href="#">Using Hair Styling Tools</a>
+                    <a href="#">Tips for Dry and Damaged Hair</a>
+                    <a href="#">Natural Hair Care</a>
+                    <a href="#">Hairstyles for Different Occasions</a>
+                </div>
+            </li>
+            <li>
+                <button class="dropdown-btn">Skin Care <i class="fa fa-caret-down"></i></button>
+                <div class="dropdown-container">
+                    <a href="#">Morning and Night Skin Care Routines</a>
+                    <a href="#">How to Treat Acne</a>
+                    <a href="#">Anti-Aging Tips</a>
+                    <a href="#">DIY Face Masks</a>
+                    <a href="#">Proper Exfoliation</a>
+                </div>
+            </li>
+            <li>
+                <button class="dropdown-btn">Body Care <i class="fa fa-caret-down"></i></button>
+                <div class="dropdown-container">
+                    <a href="#">How to Reduce Cellulite</a>
+                    <a href="#">Tips for Brightening Body Skin</a>
+                    <a href="#">Hand and Nail Care</a>
+                    <a href="#">Foot Care</a>
+                    <a href="#">Natural Body Care</a>
+                </div>
+            </li>
+            <li>
+                <button class="dropdown-btn">Healthy Lifestyle for Beauty <i class="fa fa-caret-down"></i></button>
+                <div class="dropdown-container">
+                    <a href="#">Diet for Healthy Skin</a>
+                    <a href="#">Exercise for Beauty</a>
+                    <a href="#">Benefits of Yoga for Beauty</a>
+                    <a href="#">Importance of Quality Sleep</a>
+                    <a href="#">Relaxation and Stress Relief Tips</a>
+                </div>
+            </li>
+            <li>
+                <button class="dropdown-btn">DIY and Creative Tips <i class="fa fa-caret-down"></i></button>
+                <div class="dropdown-container">
+                    <a href="#">DIY Beauty Products</a>
+                    <a href="#">Budget Beauty Tips</a>
+                    <a href="#">Quick Beauty Fixes</a>
+                    <a href="#">DIY Beauty Gift Ideas</a>
+                    <a href="#">Using Kitchen Ingredients for Beauty</a>
+                </div>
+            </li>
+        </ul>
+        <br />
+<div style="padding:5%">
+                {% include search-lunr.html %}
+<hr />	
+ <a href="/terms-and-conditions">Terms and Conditions</a><br />
+	
+<a href="/privacy-policy">Privacy Policy</a><br />        
+	
+	Copyright © {{ site.time | date: "%Y" }}&nbsp;-&nbsp;<a href="{{ site.url }}">{{ site.name }}</a>
+                </div>
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    </nav>
+    
+    <button id="indri-close-ad">&#10006;</button> <!-- Menggunakan Unicode untuk simbol "X" -->
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const closeButton = document.getElementById('indri-close-ad');
+        const floatingAd = document.getElementById('indri-floating-ad');
+
+        closeButton.addEventListener('click', function() {
+            floatingAd.style.display = 'none';
+        });
+    });
+</script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var toggleBtn = document.getElementById('toggle-btn');
+            var sidebar = document.getElementById('beauty-sidebar');
+            var dropdowns = document.querySelectorAll('.dropdown-btn');
+
+            toggleBtn.addEventListener('click', function() {
+                sidebar.classList.toggle('open');
+            });
+
+            dropdowns.forEach(function(dropdown) {
+                dropdown.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                    var dropdownContent = this.nextElementSibling;
+                    if (dropdownContent.style.display === 'block') {
+                        dropdownContent.style.display = 'none';
+                    } else {
+                        dropdownContent.style.display = 'block';
+                    }
+                });
+            });
+        });
+    </script>
+    
+
+	
 
 
      	<noscript id="deferred-styles">
@@ -692,129 +812,14 @@ var script_url=HOST+"/feeds/posts/default";bcd140526_index_label&&(script_url+="
 		
 </center>
     </div>
-    <button id="indri-close-ad">&#10006;</button> <!-- Menggunakan Unicode untuk simbol "X" -->
-</div>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const closeButton = document.getElementById('indri-close-ad');
-        const floatingAd = document.getElementById('indri-floating-ad');
-
-        closeButton.addEventListener('click', function() {
-            floatingAd.style.display = 'none';
-        });
-    });
+<script type="text/javascript">
+   var uid = '342117';
+   var wid = '713145';
+   var pop_tag = document.createElement('script');pop_tag.src='//cdn.popcash.net/show.js';document.body.appendChild(pop_tag);
+   pop_tag.onerror = function() {pop_tag = document.createElement('script');pop_tag.src='//cdn2.popcash.net/show.js';document.body.appendChild(pop_tag)};
 </script>
 
-
-
-
-
-
-    <!-- Sidebar -->
-    <nav id="beauty-sidebar">
-    	<br />
-        <ul>
-            <li>
-                <button class="dropdown-btn">Makeup <i class="fa fa-caret-down"></i></button>
-                <div class="dropdown-container">
-                    <a href="#">Basic Makeup Tutorials</a>
-                    <a href="#">Contouring and Highlighting Techniques</a>
-                    <a href="#">Eye Makeup</a>
-                    <a href="#">Lip Makeup</a>
-                    <a href="#">Special Occasion Makeup</a>
-                </div>
-            </li>
-            <li>
-                <button class="dropdown-btn">Hair Care <i class="fa fa-caret-down"></i></button>
-                <div class="dropdown-container">
-                    <a href="#">Hairstyle Tutorials</a>
-                    <a href="#">Using Hair Styling Tools</a>
-                    <a href="#">Tips for Dry and Damaged Hair</a>
-                    <a href="#">Natural Hair Care</a>
-                    <a href="#">Hairstyles for Different Occasions</a>
-                </div>
-            </li>
-            <li>
-                <button class="dropdown-btn">Skin Care <i class="fa fa-caret-down"></i></button>
-                <div class="dropdown-container">
-                    <a href="#">Morning and Night Skin Care Routines</a>
-                    <a href="#">How to Treat Acne</a>
-                    <a href="#">Anti-Aging Tips</a>
-                    <a href="#">DIY Face Masks</a>
-                    <a href="#">Proper Exfoliation</a>
-                </div>
-            </li>
-            <li>
-                <button class="dropdown-btn">Body Care <i class="fa fa-caret-down"></i></button>
-                <div class="dropdown-container">
-                    <a href="#">How to Reduce Cellulite</a>
-                    <a href="#">Tips for Brightening Body Skin</a>
-                    <a href="#">Hand and Nail Care</a>
-                    <a href="#">Foot Care</a>
-                    <a href="#">Natural Body Care</a>
-                </div>
-            </li>
-            <li>
-                <button class="dropdown-btn">Healthy Lifestyle for Beauty <i class="fa fa-caret-down"></i></button>
-                <div class="dropdown-container">
-                    <a href="#">Diet for Healthy Skin</a>
-                    <a href="#">Exercise for Beauty</a>
-                    <a href="#">Benefits of Yoga for Beauty</a>
-                    <a href="#">Importance of Quality Sleep</a>
-                    <a href="#">Relaxation and Stress Relief Tips</a>
-                </div>
-            </li>
-            <li>
-                <button class="dropdown-btn">DIY and Creative Tips <i class="fa fa-caret-down"></i></button>
-                <div class="dropdown-container">
-                    <a href="#">DIY Beauty Products</a>
-                    <a href="#">Budget Beauty Tips</a>
-                    <a href="#">Quick Beauty Fixes</a>
-                    <a href="#">DIY Beauty Gift Ideas</a>
-                    <a href="#">Using Kitchen Ingredients for Beauty</a>
-                </div>
-            </li>
-        </ul>
-        <br />
-<div style="padding:5%">
-                {% include search-lunr.html %}
-<hr />	
- <a href="/terms-and-conditions">Terms and Conditions</a><br />
-	
-<a href="/privacy-policy">Privacy Policy</a><br />        
-	
-	Copyright © {{ site.time | date: "%Y" }}&nbsp;-&nbsp;<a href="{{ site.url }}">{{ site.name }}</a>
-                </div>
-        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-    </nav>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var toggleBtn = document.getElementById('toggle-btn');
-            var sidebar = document.getElementById('beauty-sidebar');
-            var dropdowns = document.querySelectorAll('.dropdown-btn');
-
-            toggleBtn.addEventListener('click', function() {
-                sidebar.classList.toggle('open');
-            });
-
-            dropdowns.forEach(function(dropdown) {
-                dropdown.addEventListener('click', function() {
-                    this.classList.toggle('active');
-                    var dropdownContent = this.nextElementSibling;
-                    if (dropdownContent.style.display === 'block') {
-                        dropdownContent.style.display = 'none';
-                    } else {
-                        dropdownContent.style.display = 'block';
-                    }
-                });
-            });
-        });
-    </script>
-    
-
-	
 		
 </body>
 </html>
