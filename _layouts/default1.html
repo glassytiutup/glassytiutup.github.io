@@ -55,7 +55,7 @@
             background-color: #fff; /* Pink */
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
-            z-index: 99900;
+            z-index: 100;
             position: fixed;
             top: 40;
             right: +100%; /* Move sidebar off-screen initially */
@@ -69,7 +69,7 @@
 
         #beauty-sidebar ul {
             list-style-type: none;
-            padding: 10px;
+            padding: 0px;
             margin: 0;
             }
 
@@ -81,7 +81,7 @@
             display: block;
             background: none;
             border: none;
-            padding: 15px 20px;
+            padding: 2px 10px;
             text-align: left;
             width: 100%;
             font-size: 16px;
@@ -338,7 +338,7 @@
 
         #tocSidebar ul li {
             margin: 0;
-            padding: 5px 10px;
+            padding: 7px 10px;
         }
 
         #tocSidebar ul li ul {
@@ -430,6 +430,11 @@
     </div>
 
 	<!--toc-->
+
+
+
+
+	
     <!-- Header -->
     <header id="header">
         <h1 style="font-size:20px;">
@@ -506,13 +511,16 @@
                 </div>
             </li>
 		
-		<li><a href="/About">About</a></li>
-		<li><a href="/terms-and-conditions">Terms and Conditions</a></li>
-		<li><a href="/privacy-policy">Privacy Policy</a></li>
+<li class="dropdown-btn">
+	<a href="/About">About</a></li>
+		<li class="dropdown-btn">
+			<a href="/terms-and-conditions">Terms and Conditions</a></li>
+		<li class="dropdown-btn">
+			<a href="/privacy-policy">Privacy Policy</a></li>		
 		    
         </ul>
-        <br />
-<div style="padding:5%">
+
+<div style="padding:10px">
                 {% include search-lunr.html %}
 
                 </div>
@@ -571,15 +579,12 @@
       
       
       
-
-      
-      
+     
       </div>     </div>
         </div>
         </div>
     </div>
     
-
 
 
 
@@ -684,7 +689,7 @@ var bcd140526_snippet_length = 0;/*bcd140526_snippet_length*/
 var bcd140526_post_count = 150;/*bcd140526_post_count*/
 var bcd140526_thumbnail_size = 100;// v1.5, only effect with list style/*bcd140526_thumbnail_size*/
 var bcd140526_sort_by = 'random'; // latest or random/*bcd140526_sort_by*/
-var bcd140526_index_label = 'blog';/*bcd140526_index_label*/
+var bcd140526_index_label = 'blog2';/*bcd140526_index_label*/
 var bcd140526_design_style = 'column';// list or column/*bcd140526_design_style*/
 var bcd140526_date_format = 'mm/dd/yyyy';/*bcd140526_date_format*/
 var lang_readmore = 'Readmore';/*lang_readmore*/
@@ -941,9 +946,7 @@ var script_url=HOST+"/feeds/posts/default";bcd140526_index_label&&(script_url+="
 		
 </center>
 
-   <button id="indri-close-ad">&#10006;</button> 
-
-
+   <button id="indri-close-ad">&#10006;</button> <!-- Menggunakan Unicode untuk simbol "X" -->
 
 
     </div>
@@ -1022,4 +1025,3 @@ var script_url=HOST+"/feeds/posts/default";bcd140526_index_label&&(script_url+="
 	
 </body>
 </html>
-
