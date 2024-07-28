@@ -1,0 +1,237 @@
+---
+layout: x2
+title:  "aylinselvim - Step-by-Step Guide to Creating a Bold Winged Eyeliner Look"
+author: admin
+categories: [eye-makeup]
+image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjDYdSR27dh6TbX8H9foJGYUAxmB-c2Jo2VBUSKYoHGbvIAnb_3j8L1iASeByjbJl76th2a5RXhTiUnUbRnCrIpXi-t5gcfdfMnY2R2UpSgHxjHYQvXSei1mT-Pi-KU8lSC3wZ3RqUd54KyxRw8wQaWPKI3tEJxKHS9jVck9rIJYwS4cVddHmoMMxkSIlI/s1600/aylinselvim%20Aylin%20Selvi%20%2001.jpg"
+---
+
+
+
+
+
+
+  <section>
+    <h2>Introduction</h2>
+    <p>The bold winged eyeliner look is a classic makeup style that adds drama and definition to your eyes. Whether you're preparing for a special event or just want to elevate your everyday makeup, a well-executed winged eyeliner can make a powerful statement. This comprehensive guide will walk you through the steps to create a bold winged eyeliner look, offering tips and techniques to achieve the perfect wing every time.</p>
+  </section>
+  <section>
+<!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper" id="gallery-wrapper">
+            <!-- Slides will be dynamically added here -->
+        </div>
+        <!-- Add Navigation -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script type="text/javascript">
+        // Initialize Swiper
+        var swiper = new Swiper('.swiper-container', {
+            direction: 'horizontal',
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
+        // Label for filtering posts
+        var bcd140526_index_label = 'Aylin Selvi'; 
+
+        // Function to fetch and display posts
+        function loadPosts() {
+            var script_url = `https://www.teteh-ingga.my.id/feeds/posts/default/-/${encodeURIComponent(bcd140526_index_label)}?start-index=1&max-results=6666&alt=json-in-script&callback=displayPosts`;
+            var script = document.createElement('script');
+            script.src = script_url;
+            document.body.appendChild(script);
+        }
+
+        function displayPosts(data) {
+            var wrapper = document.getElementById('gallery-wrapper');
+            wrapper.innerHTML = ''; // Clear existing slides
+
+            data.feed.entry.forEach(function(entry) {
+                var thumbnail = entry.media$thumbnail ? entry.media$thumbnail.url : '';
+                var link = entry.link.find(link => link.rel === 'alternate').href;
+                var title = entry.title.$t;
+
+                if (thumbnail) {
+                    // Ensure higher resolution image
+                    if (thumbnail.includes('/s72-c/')) {
+                        thumbnail = thumbnail.replace('/s72-c/', '/s1600/');
+                    } else if (thumbnail.includes('=s72-c')) {
+                        thumbnail = thumbnail.replace('=s72-c', '=s1600');
+                    }
+                    
+                    var slide = document.createElement('div');
+                    slide.className = 'swiper-slide';
+                    slide.innerHTML = `
+                        <a href="${link}" class="slide-link" target="_blank"></a>
+                        <img src="${thumbnail}" alt="${title}" loading="lazy">
+                        <div class="slide-heading">${title}</div>
+                    `;
+                    wrapper.appendChild(slide);
+                }
+            });
+
+            swiper.update(); // Update Swiper after adding slides
+        }
+
+        loadPosts();
+    </script>
+    <h2>1. Gather Your Tools</h2>
+    <p>Before you start, make sure you have all the necessary tools:</p>
+    <ul>
+      <li><strong>Eyeliner:</strong> Choose a high-quality liquid or gel eyeliner for a bold and defined line. Pen eyeliners are also convenient for precise application.</li>
+      <li><strong>Eye Primer:</strong> Use an eye primer to create a smooth base and enhance the staying power of your eyeliner.</li>
+      <li><strong>Brushes and Tools:</strong> A fine-tipped brush or an angled brush can help perfect the wing shape. Cotton swabs and makeup remover are useful for corrections.</li>
+      <li><strong>Mirror:</strong> A magnifying mirror can provide a closer view for detailed application.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>2. Prepare Your Eyelids</h2>
+    <p>Proper preparation ensures a smooth application and long-lasting results:</p>
+    <ul>
+      <li><strong>Clean Your Eyelids:</strong> Start with clean, dry eyelids. Use a gentle cleanser to remove any residual makeup or oils.</li>
+      <li><strong>Apply Eye Primer:</strong> Apply an eye primer evenly across your eyelids and let it dry. This will help your eyeliner adhere better and prevent smudging.</li>
+      <li><strong>Set with Powder:</strong> Lightly dust a translucent powder over the primer to create a matte surface, which can help in achieving a smoother application.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>3. Draw the Wing</h2>
+    <p>Creating the perfect wing requires precision and technique:</p>
+    <ol>
+      <li><strong>Define the Angle:</strong> Using a pencil or light eyeshadow, mark where you want the wing to end. This is usually angled upwards towards the end of your eyebrow.</li>
+      <li><strong>Start from the Outer Corner:</strong> Begin drawing the wing from the outer corner of your eye. Extend the line outward, following the angle you’ve defined. Use short, controlled strokes for accuracy.</li>
+      <li><strong>Connect the Wing:</strong> Connect the end of the wing to the middle of your upper lash line. This will form the base of your winged shape. Ensure that the line is smooth and even.</li>
+    </ol>
+  </section>
+  <section><!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper" id="gallery-wrapper">
+            <!-- Slides will be dynamically added here -->
+        </div>
+        <!-- Add Navigation -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script type="text/javascript">
+        // Initialize Swiper
+        var swiper = new Swiper('.swiper-container', {
+            direction: 'horizontal',
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
+        // Label for filtering posts
+        var bcd140526_index_label = 'aylinselvim'; 
+
+        // Function to fetch and display posts
+        function loadPosts() {
+            var script_url = `https://www.teteh-ingga.my.id/feeds/posts/default/-/${encodeURIComponent(bcd140526_index_label)}?start-index=1&max-results=6666&alt=json-in-script&callback=displayPosts`;
+            var script = document.createElement('script');
+            script.src = script_url;
+            document.body.appendChild(script);
+        }
+
+        function displayPosts(data) {
+            var wrapper = document.getElementById('gallery-wrapper');
+            wrapper.innerHTML = ''; // Clear existing slides
+
+            data.feed.entry.forEach(function(entry) {
+                var thumbnail = entry.media$thumbnail ? entry.media$thumbnail.url : '';
+                var link = entry.link.find(link => link.rel === 'alternate').href;
+                var title = entry.title.$t;
+
+                if (thumbnail) {
+                    // Ensure higher resolution image
+                    if (thumbnail.includes('/s72-c/')) {
+                        thumbnail = thumbnail.replace('/s72-c/', '/s1600/');
+                    } else if (thumbnail.includes('=s72-c')) {
+                        thumbnail = thumbnail.replace('=s72-c', '=s1600');
+                    }
+                    
+                    var slide = document.createElement('div');
+                    slide.className = 'swiper-slide';
+                    slide.innerHTML = `
+                        <a href="${link}" class="slide-link" target="_blank"></a>
+                        <img src="${thumbnail}" alt="${title}" loading="lazy">
+                        <div class="slide-heading">${title}</div>
+                    `;
+                    wrapper.appendChild(slide);
+                }
+            });
+
+            swiper.update(); // Update Swiper after adding slides
+        }
+
+        loadPosts();
+    </script>
+    <h2>4. Fill in the Wing</h2>
+    <p>Once the outline is complete, fill in the wing to create a bold look:</p>
+    <ol>
+      <li><strong>Apply Eyeliner:</strong> Use your eyeliner to fill in the winged shape. Apply the product in layers to build up the intensity and ensure full coverage.</li>
+      <li><strong>Ensure Smooth Lines:</strong> For a clean finish, go over the line to smooth out any uneven areas. A fine-tipped brush can help with precision.</li>
+      <li><strong>Perfect the Edges:</strong> Use a cotton swab dipped in makeup remover to clean up and sharpen the edges of the wing. This will help achieve a crisp and defined look.</li>
+    </ol>
+  </section>
+  <section>
+    <h2>5. Define the Inner Corner</h2>
+    <p>Enhance the overall look by defining the inner corner of your eye:</p>
+    <ul>
+      <li><strong>Extend the Liner:</strong> Apply a thin line of eyeliner to the inner corner of your eye, connecting it smoothly to the wing. This will create a cohesive look.</li>
+      <li><strong>Use a Light Touch:</strong> For a more natural appearance, apply the liner gently and avoid making it too thick.</li>
+      <li><strong>Consider Adding a Highlight:</strong> Apply a small amount of highlighter to the inner corner of your eye to brighten and open up the area.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>6. Apply Mascara</h2>
+    <p>Complete your bold winged eyeliner look with mascara to define your lashes:</p>
+    <ul>
+      <li><strong>Choose the Right Mascara:</strong> Opt for a volumizing or lengthening mascara to complement the dramatic effect of your eyeliner.</li>
+      <li><strong>Apply in Layers:</strong> Apply mascara in layers, starting from the roots and wiggling the wand upwards to avoid clumps and ensure full coverage.</li>
+      <li><strong>Consider False Lashes:</strong> For an extra boost, add false lashes to enhance the volume and create a more striking look.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>7. Tips for a Flawless Winged Eyeliner</h2>
+    <p>Use these tips to ensure your winged eyeliner looks flawless:</p>
+    <ul>
+      <li><strong>Practice Makes Perfect:</strong> Achieving the perfect wing takes practice. Experiment with different techniques and shapes to find what works best for you.</li>
+      <li><strong>Use Tape for Precision:</strong> Place a small piece of tape at the outer corner of your eye to guide the angle of your wing and ensure symmetry.</li>
+      <li><strong>Adjust for Eye Shape:</strong> Tailor the wing shape to your eye shape. For hooded eyes, keep the wing more subtle and avoid excessive thickness.</li>
+      <li><strong>Maintain a Steady Hand:</strong> Use a steady hand and work slowly to achieve precise lines. Holding your elbow on a stable surface can help with stability.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>8. Common Mistakes and How to Avoid Them</h2>
+    <p>Be aware of common mistakes and how to avoid them:</p>
+    <ul>
+      <li><strong>Uneven Wings:</strong> If your wings aren’t symmetrical, use a cotton swab with makeup remover to correct the shape and ensure evenness.</li>
+      <li><strong>Smudging:</strong> To prevent smudging, use a waterproof formula and avoid touching your eyes throughout the day.</li>
+      <li><strong>Overly Thick Lines:</strong> Avoid making the lines too thick, as this can overwhelm your eyes. Stick to a thinner line for a more refined look.</li>
+      <li><strong>Skipping Primer:</strong> Always use an eye primer to create a smooth base and enhance the staying power of your eyeliner.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>9. Trending Winged Eyeliner Looks</h2>
+    <p>Stay updated with the latest trends in winged eyeliner:</p>
+    <ul>
+      <li><strong>Double Wing:</strong> Create a double winged effect by adding a second, thinner wing above the main one for a more dramatic appearance.</li>
+      <li><strong>Colored Liner:</strong> Experiment with colored eyeliners to add a vibrant touch to your winged look. Bright hues like electric blue or emerald green are trending.</li>
+      <li><strong>Graphic Wing:</strong> Try a graphic winged eyeliner with geometric shapes or sharp angles for a modern and edgy style.</li>
+      <li><strong>Glitter Liner:</strong> Add some sparkle with glitter eyeliner to create a glamorous and eye-catching effect.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Conclusion</h2>
+    <p>Creating a bold winged eyeliner look can enhance your eyes and make a strong statement. By following these steps and tips, you can achieve a flawless and dramatic wing that complements your makeup style. Whether you're preparing for a special occasion or just want to add a touch of glamour to your everyday look, mastering the art of winged eyeliner will elevate your beauty routine and give you a confident and striking appearance.</p>
+  </section>

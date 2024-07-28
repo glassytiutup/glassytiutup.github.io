@@ -1,0 +1,208 @@
+---
+layout: x2
+title:  "aylinselvim - Creating a Smokey Eye Look: A Step-by-Step Guide"
+author: admin
+categories: [eye-makeup]
+image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhCrDAin8WAo2EAHygNCT5ckO90efT0RA77WCxxOJm83Bb3pvbsgJ7iIgdxR8ZkJoI8iOePFXDOHyowBaPgLJ-L3qFjbvrKZfJF1AU7wRomxCCL1g0vzonoBIgOEm8DESWcQE8i40TCy3lMJUps-LAdEyWe5C8J4XJjjHT46fCDX6cZvUe-F13FbtJCHO8/s1600/aylinselvim%20Aylin%20Selvi%20%2011.jpg"
+---
+
+
+
+
+
+  <section>
+    <h2>Introduction</h2>
+    <p>The smokey eye look is a classic makeup style that exudes elegance and drama. Perfect for evening events or special occasions, this versatile look can be tailored to suit any eye shape and color. This comprehensive guide will walk you through the process of creating a flawless smokey eye, from selecting the right products to mastering blending techniques. Follow these steps to achieve a stunning smokey eye that enhances your natural beauty.</p>
+  </section>
+  <section><!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper" id="gallery-wrapper">
+            <!-- Slides will be dynamically added here -->
+        </div>
+        <!-- Add Navigation -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script type="text/javascript">
+        // Initialize Swiper
+        var swiper = new Swiper('.swiper-container', {
+            direction: 'horizontal',
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
+        // Label for filtering posts
+        var bcd140526_index_label = 'Aylin Selvi'; 
+
+        // Function to fetch and display posts
+        function loadPosts() {
+            var script_url = `https://www.teteh-ingga.my.id/feeds/posts/default/-/${encodeURIComponent(bcd140526_index_label)}?start-index=1&max-results=6666&alt=json-in-script&callback=displayPosts`;
+            var script = document.createElement('script');
+            script.src = script_url;
+            document.body.appendChild(script);
+        }
+
+        function displayPosts(data) {
+            var wrapper = document.getElementById('gallery-wrapper');
+            wrapper.innerHTML = ''; // Clear existing slides
+
+            data.feed.entry.forEach(function(entry) {
+                var thumbnail = entry.media$thumbnail ? entry.media$thumbnail.url : '';
+                var link = entry.link.find(link => link.rel === 'alternate').href;
+                var title = entry.title.$t;
+
+                if (thumbnail) {
+                    // Ensure higher resolution image
+                    if (thumbnail.includes('/s72-c/')) {
+                        thumbnail = thumbnail.replace('/s72-c/', '/s1600/');
+                    } else if (thumbnail.includes('=s72-c')) {
+                        thumbnail = thumbnail.replace('=s72-c', '=s1600');
+                    }
+                    
+                    var slide = document.createElement('div');
+                    slide.className = 'swiper-slide';
+                    slide.innerHTML = `
+                        <a href="${link}" class="slide-link" target="_blank"></a>
+                        <img src="${thumbnail}" alt="${title}" loading="lazy">
+                        <div class="slide-heading">${title}</div>
+                    `;
+                    wrapper.appendChild(slide);
+                }
+            });
+
+            swiper.update(); // Update Swiper after adding slides
+        }
+
+        loadPosts();
+    </script>
+    <h2>1. Gather Your Tools and Products</h2>
+    <p>Before you start, ensure you have all the necessary tools and products:</p>
+    <ul>
+      <li><strong>Eye Primer:</strong> To create a smooth base and prolong the wear of your eyeshadow.</li>
+      <li><strong>Eyeshadows:</strong> You’ll need a light shade for highlighting, a medium shade for blending, and a dark shade for creating depth.</li>
+      <li><strong>Eyeliner:</strong> A black or dark brown pencil or gel eyeliner.</li>
+      <li><strong>Brushes:</strong> A flat shader brush, blending brush, crease brush, and smudge brush.</li>
+      <li><strong>Mascara:</strong> To complete the look with voluminous lashes.</li>
+      <li><strong>Optional:</strong> False eyelashes for added drama.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>2. Prep Your Eyelids</h2>
+    <p>Start by applying an eye primer to your eyelids. This step is crucial as it ensures that your eyeshadow stays in place and prevents creasing. If you don’t have an eye primer, a thin layer of concealer or foundation can work as a substitute. Blend it evenly across your lids using your fingers or a brush.</p>
+  </section>
+  <section>
+    <h2>3. Apply the Base Shade</h2>
+    <p>Choose a light, neutral eyeshadow as your base shade. Using a flat shader brush, apply this color all over your eyelid, from the lash line to the brow bone. This will create a smooth canvas and help other shades blend more easily.</p>
+  </section>
+  <section>
+    <h2>4. Define the Crease</h2>
+    <p>Next, take a medium-toned eyeshadow and apply it to your crease using a crease brush. Start at the outer corner of your eye and blend the color inwards, following the natural shape of your eye. Use windshield wiper motions to ensure the color is evenly distributed and well blended. This step adds depth and dimension to your eyes.</p>
+  </section>
+  <section>
+    <h2>5. Darken the Outer Corner</h2>
+    <p>Now it’s time to add the smokey effect. Choose a dark eyeshadow shade, such as black, charcoal, or deep brown. Using a flat shader brush, apply this color to the outer corner of your eyelid, focusing on the outer V area. Blend the color into your crease and slightly onto your eyelid. Use a clean blending brush to soften any harsh lines and create a seamless transition between the shades.</p>
+  </section>
+  <section>
+    <h2>6. Apply Eyeliner</h2>
+    <p>For a truly smokey look, eyeliner is essential. Use a black or dark brown pencil or gel eyeliner to line your upper lash line. Start with a thin line at the inner corner and gradually thicken it as you move towards the outer corner. For added intensity, smudge the eyeliner slightly using a smudge brush or a Q-tip. You can also apply a bit of the dark eyeshadow over the liner to set it and enhance the smokey effect.</p>
+  </section>
+  <section>
+    <h2>7. Line the Lower Lash Line</h2>
+    <p>Don’t forget about the lower lash line. Use the same eyeliner to line your lower lashes, focusing on the outer half. Smudge it gently with a smudge brush or Q-tip to soften the line. For a cohesive look, apply a bit of the dark eyeshadow over the liner and blend it slightly.</p>
+  </section>
+  <section>
+    <h2>8. Highlight the Inner Corners and Brow Bone</h2>
+    <p>To brighten your eyes and add contrast to the smokey look, apply a light, shimmery eyeshadow to the inner corners of your eyes and the brow bone. Use a small, precise brush to apply the highlight and blend it well. This step adds dimension and makes your eyes appear more open and awake.</p>
+  </section>
+  <section><!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper" id="gallery-wrapper">
+            <!-- Slides will be dynamically added here -->
+        </div>
+        <!-- Add Navigation -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script type="text/javascript">
+        // Initialize Swiper
+        var swiper = new Swiper('.swiper-container', {
+            direction: 'horizontal',
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
+        // Label for filtering posts
+        var bcd140526_index_label = 'aylinselvim'; 
+
+        // Function to fetch and display posts
+        function loadPosts() {
+            var script_url = `https://www.teteh-ingga.my.id/feeds/posts/default/-/${encodeURIComponent(bcd140526_index_label)}?start-index=1&max-results=6666&alt=json-in-script&callback=displayPosts`;
+            var script = document.createElement('script');
+            script.src = script_url;
+            document.body.appendChild(script);
+        }
+
+        function displayPosts(data) {
+            var wrapper = document.getElementById('gallery-wrapper');
+            wrapper.innerHTML = ''; // Clear existing slides
+
+            data.feed.entry.forEach(function(entry) {
+                var thumbnail = entry.media$thumbnail ? entry.media$thumbnail.url : '';
+                var link = entry.link.find(link => link.rel === 'alternate').href;
+                var title = entry.title.$t;
+
+                if (thumbnail) {
+                    // Ensure higher resolution image
+                    if (thumbnail.includes('/s72-c/')) {
+                        thumbnail = thumbnail.replace('/s72-c/', '/s1600/');
+                    } else if (thumbnail.includes('=s72-c')) {
+                        thumbnail = thumbnail.replace('=s72-c', '=s1600');
+                    }
+                    
+                    var slide = document.createElement('div');
+                    slide.className = 'swiper-slide';
+                    slide.innerHTML = `
+                        <a href="${link}" class="slide-link" target="_blank"></a>
+                        <img src="${thumbnail}" alt="${title}" loading="lazy">
+                        <div class="slide-heading">${title}</div>
+                    `;
+                    wrapper.appendChild(slide);
+                }
+            });
+
+            swiper.update(); // Update Swiper after adding slides
+        }
+
+        loadPosts();
+    </script>
+    <h2>9. Apply Mascara and Optional False Lashes</h2>
+    <p>Finish the look by applying several coats of volumizing mascara to your upper and lower lashes. If you want extra drama, consider adding false eyelashes. Apply a thin layer of lash glue to the false lashes, wait for it to become tacky, and then place them close to your natural lash line using tweezers. Press them gently to secure them in place.</p>
+  </section>
+  <section>
+    <h2>10. Final Touches</h2>
+    <p>After completing your smokey eye, take a step back and assess your work. Make any necessary adjustments, such as blending harsh lines or adding more intensity to the outer corners. Ensure that both eyes are symmetrical and the overall look is balanced.</p>
+  </section>
+  <section>
+    <h2>Tips for Perfecting the Smokey Eye</h2>
+    <ul>
+      <li><strong>Choose the Right Colors:</strong> Select shades that complement your eye color and skin tone. For a classic smokey eye, neutral tones like black, gray, and brown work best. For a more creative look, experiment with jewel tones or metallics.</li>
+      <li><strong>Blend, Blend, Blend:</strong> The key to a flawless smokey eye is blending. Take your time to blend each shade seamlessly into the next to avoid harsh lines and create a gradient effect.</li>
+      <li><strong>Build Gradually:</strong> Start with a light hand and build up the intensity gradually. It’s easier to add more color than to remove excess product.</li>
+      <li><strong>Use the Right Tools:</strong> High-quality brushes make a significant difference in application and blending. Invest in a good set of eye makeup brushes for the best results.</li>
+      <li><strong>Practice Makes Perfect:</strong> Don’t be discouraged if you don’t get it right the first time. Practice and experimentation will help you master the technique and create your perfect smokey eye.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Conclusion</h2>
+    <p>Creating a smokey eye look may seem intimidating at first, but with the right tools, techniques, and practice, you can achieve a stunning and sophisticated result. By following this step-by-step guide, you’ll be able to master the art of the smokey eye and make it your go-to look for special occasions or nights out. Remember, blending is key, and taking your time will ensure a flawless finish. With these tips and tricks, you’re well on your way to becoming a smokey eye pro.</p>
+  </section>
