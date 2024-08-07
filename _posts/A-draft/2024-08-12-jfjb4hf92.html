@@ -1,0 +1,366 @@
+---
+layout: x10
+title:  "Aylin Selvi - Beginner's Guide: Easy Basic Makeup Tutorials"
+author: admin
+categories: [basic-makeup-tutorials]
+image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgRATeUhkdCsaspH4k9rvMXNzjj0zojD6321f4MgfUCJTtxx7yBrXrIx1Ih33PxIJIBAhEqiz-ggxI3NCpkx3IIj8MdnXIq0GR8-C3pv2UvCriP2ARq_uZAK3bfvbvJ8JpuZpYRYLqS4GWd_c8BgcolO-mwkqtzeL_9JRBWucnD6FfhWrq8XSkUKfQnK_w/s1600/20240729_114325.jpg"
+---
+
+
+
+
+    
+
+    <p>Mastering basic makeup techniques can enhance your natural features and boost your confidence. Whether you're a beginner or looking to refine your skills, these easy tutorials will guide you through essential steps for a flawless look.</p>
+
+    <h2>Table of Contents</h2>
+    <ol>
+        <li><a href="#prep">Preparation and Skincare</a></li>
+        <li><a href="#foundation">Applying Foundation</a></li>
+        <li><a href="#concealer">Using Concealer Correctly</a></li>
+        <li><a href="#eyeshadow">Creating Simple Eyeshadow Looks</a></li>
+        <li><a href="#eyeliner">Perfecting Eyeliner Techniques</a></li>
+        <li><a href="#blush">Blending Blush for a Natural Flush</a></li>
+        <li><a href="#highlighter">Highlighting for a Dewy Glow</a></li>
+        <li><a href="#lips">Enhancing Lips with Lipstick or Gloss</a></li>
+        <li><a href="#setting">Setting Your Makeup</a></li>
+    </ol>
+
+    <section id="prep">
+        <h2>1. Preparation and Skincare</h2>
+        <p>Start with a clean, moisturized face. Apply a primer to create a smooth base for makeup application.</p>
+    </section>
+
+    <section id="foundation">
+        <h2>2. Applying Foundation</h2>
+  <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<style>
+    html, body {
+        width: 100%;
+        overflow-x: hidden; /* Mencegah scrollbar horizontal */
+    }
+
+    /* Swiper Container */
+    .swiper-container {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Swiper Slide */
+    .swiper-slide {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        min-height: 300px; /* Set a minimum height for slides */
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box; /* Ensure padding and border are included in the width and height */
+    }
+
+    .swiper-slide img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover; /* Ensure the image covers the slide area */
+        display: block; /* Prevent extra space below images */
+    }
+
+    /* Slide Heading */
+    .slide-heading {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        color: white;
+        background-color: rgba(0, 0, 0, 0); /* 100% transparan */
+        padding: 10px;
+        margin: 0;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Shadow hitam */
+        z-index: 10;
+    }
+
+    /* Hide Pagination */
+    .swiper-pagination {
+        display: none;
+    }
+
+    /* Navigation Buttons */
+    .swiper-button-next,
+    .swiper-button-prev {
+        color: #fff; /* White color for the arrows */
+    }
+
+    /* Optional: Style for button on hover */
+    .swiper-button-next:hover,
+    .swiper-button-prev:hover {
+        color: #f0f0f0; /* Slightly different white on hover */
+    }
+
+    /* Link styling */
+    .slide-link {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 5;
+        text-decoration: none;
+    }
+</style>
+
+<!-- Swiper -->
+<div class="swiper-container">
+    <div class="swiper-wrapper" id="gallery-wrapper">
+        <!-- Slides will be dynamically added here -->
+    </div>
+    <!-- Add Navigation -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</div>
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script type="text/javascript">
+    // Initialize Swiper
+    var swiper = new Swiper('.swiper-container', {
+        direction: 'horizontal',
+        loop: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+
+    // Label for filtering posts
+    var bcd140526_index_label = 'aylinselvim';
+
+    // Function to fetch and display posts
+    function loadPosts() {
+        var script_url = `https://healtyheapi.blogspot.com/feeds/posts/default/-/${encodeURIComponent(bcd140526_index_label)}?start-index=1&max-results=6666&alt=json-in-script&callback=displayPosts`;
+        var script = document.createElement('script');
+        script.src = script_url;
+        document.body.appendChild(script);
+    }
+
+    function displayPosts(data) {
+        var wrapper = document.getElementById('gallery-wrapper');
+        wrapper.innerHTML = ''; // Clear existing slides
+
+        data.feed.entry.forEach(function(entry) {
+            var thumbnail = entry.media$thumbnail ? entry.media$thumbnail.url : '';
+            var link = entry.link.find(link => link.rel === 'alternate').href;
+            var title = entry.title.$t;
+
+            if (thumbnail) {
+                // Ensure higher resolution image
+                if (thumbnail.includes('/s72-c/')) {
+                    thumbnail = thumbnail.replace('/s72-c/', '/s1600/');
+                } else if (thumbnail.includes('=s72-c')) {
+                    thumbnail = thumbnail.replace('=s72-c', '=s1600');
+                }
+
+                var slide = document.createElement('div');
+                slide.className = 'swiper-slide';
+                slide.innerHTML = `
+                    <a href="${link}" class="slide-link" target="_blank"></a>
+                    <img src="${thumbnail}" alt="${title}" loading="lazy">
+                    <div class="slide-heading">${title}</div>
+                `;
+                wrapper.appendChild(slide);
+            }
+        });
+
+        swiper.update(); // Update Swiper after adding slides
+    }
+
+    loadPosts();
+</script>      <p>Choose a foundation that matches your skin tone. Apply it evenly using a brush or sponge, blending well into your neck.</p>
+    </section>
+
+    <section id="concealer">
+        <h2>3. Using Concealer Correctly</h2>
+        <p>Apply concealer under your eyes and on any blemishes. Blend gently with your ring finger for a natural finish.</p>
+    </section>
+
+    <section id="eyeshadow">
+        <h2>4. Creating Simple Eyeshadow Looks</h2>
+        <p>Use neutral shades for a basic eye look. Apply a light color on the lid and a slightly darker shade in the crease.</p>
+    </section>
+
+    <section id="eyeliner">
+        <h2>5. Perfecting Eyeliner Techniques</h2>
+        <p>Draw a thin line along your upper lash line for definition. Optional: add a small wing for a classic cat-eye look.</p>
+    </section>
+
+    <section id="blush">
+        <h2>6. Blending Blush for a Natural Flush</h2>
+        <p>Choose a blush color that complements your skin tone. Smile and apply blush to the apples of your cheeks, blending upwards.</p>
+    </section>
+
+    <section id="highlighter">
+        <h2>7. Highlighting for a Dewy Glow</h2>
+        <p>Apply highlighter to the high points of your face: cheekbones, bridge of the nose, and cupid's bow, for a radiant finish.</p>
+    </section>
+
+    <section id="lips">
+        <h2>8. Enhancing Lips with Lipstick or Gloss</h2>
+   <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<style>
+    html, body {
+        width: 100%;
+        overflow-x: hidden; /* Mencegah scrollbar horizontal */
+    }
+
+    /* Swiper Container */
+    .swiper-container {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Swiper Slide */
+    .swiper-slide {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        min-height: 300px; /* Set a minimum height for slides */
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box; /* Ensure padding and border are included in the width and height */
+    }
+
+    .swiper-slide img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover; /* Ensure the image covers the slide area */
+        display: block; /* Prevent extra space below images */
+    }
+
+    /* Slide Heading */
+    .slide-heading {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        color: white;
+        background-color: rgba(0, 0, 0, 0); /* 100% transparan */
+        padding: 10px;
+        margin: 0;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Shadow hitam */
+        z-index: 10;
+    }
+
+    /* Hide Pagination */
+    .swiper-pagination {
+        display: none;
+    }
+
+    /* Navigation Buttons */
+    .swiper-button-next,
+    .swiper-button-prev {
+        color: #fff; /* White color for the arrows */
+    }
+
+    /* Optional: Style for button on hover */
+    .swiper-button-next:hover,
+    .swiper-button-prev:hover {
+        color: #f0f0f0; /* Slightly different white on hover */
+    }
+
+    /* Link styling */
+    .slide-link {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 5;
+        text-decoration: none;
+    }
+</style>
+
+<!-- Swiper -->
+<div class="swiper-container">
+    <div class="swiper-wrapper" id="gallery-wrapper">
+        <!-- Slides will be dynamically added here -->
+    </div>
+    <!-- Add Navigation -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</div>
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script type="text/javascript">
+    // Initialize Swiper
+    var swiper = new Swiper('.swiper-container', {
+        direction: 'horizontal',
+        loop: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+
+    // Label for filtering posts
+    var bcd140526_index_label = 'aylin selvi';
+
+    // Function to fetch and display posts
+    function loadPosts() {
+        var script_url = `https://healtyheapi.blogspot.com/feeds/posts/default/-/${encodeURIComponent(bcd140526_index_label)}?start-index=1&max-results=6666&alt=json-in-script&callback=displayPosts`;
+        var script = document.createElement('script');
+        script.src = script_url;
+        document.body.appendChild(script);
+    }
+
+    function displayPosts(data) {
+        var wrapper = document.getElementById('gallery-wrapper');
+        wrapper.innerHTML = ''; // Clear existing slides
+
+        data.feed.entry.forEach(function(entry) {
+            var thumbnail = entry.media$thumbnail ? entry.media$thumbnail.url : '';
+            var link = entry.link.find(link => link.rel === 'alternate').href;
+            var title = entry.title.$t;
+
+            if (thumbnail) {
+                // Ensure higher resolution image
+                if (thumbnail.includes('/s72-c/')) {
+                    thumbnail = thumbnail.replace('/s72-c/', '/s1600/');
+                } else if (thumbnail.includes('=s72-c')) {
+                    thumbnail = thumbnail.replace('=s72-c', '=s1600');
+                }
+
+                var slide = document.createElement('div');
+                slide.className = 'swiper-slide';
+                slide.innerHTML = `
+                    <a href="${link}" class="slide-link" target="_blank"></a>
+                    <img src="${thumbnail}" alt="${title}" loading="lazy">
+                    <div class="slide-heading">${title}</div>
+                `;
+                wrapper.appendChild(slide);
+            }
+        });
+
+        swiper.update(); // Update Swiper after adding slides
+    }
+
+    loadPosts();
+</script>     <p>Outline your lips with a lip liner for definition. Fill in with lipstick or gloss in a shade of your choice.</p>
+    </section>
+
+    <section id="setting">
+        <h2>9. Setting Your Makeup</h2>
+        <p>Finish with a setting spray to lock in your makeup and ensure it lasts throughout the day.</p>
+    </section>
+
+    <p>By following these easy basic makeup tutorials, you can achieve a polished look for any occasion. Practice these techniques to refine your skills and personalize your makeup routine.</p>
