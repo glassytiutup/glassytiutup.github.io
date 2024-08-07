@@ -1,0 +1,376 @@
+---
+layout: x6
+title:  "Aylin Selvi - Basic Makeup Tutorials - Creating Simple Eyeshadow Looks"
+author: admin
+categories: [eye-makeup]
+image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEida_2j6B4WKxaDcC9rWrJcsIq5eXaxnvgsUWXOW1HRQlMZmYGZdg-YTzpuHtThIlTnTgf8yDt9Q2kuVgh5PdrF0PIGYgcTg7vfzftVLVMwjBh2-yKpINYjze8JeDnXs3Ku-jAgUVXUqpTCShkQKpNyDQ4JEilG2XDn740kQ37OvmU1LgzTpBHAhRTX9r0/s1600/20240729_114424.jpg"
+---
+
+
+
+    
+
+    <p>Mastering simple eyeshadow looks is key to enhancing your eyes and creating a polished makeup appearance. This tutorial provides step-by-step guidance on creating effortless eyeshadow looks that are perfect for everyday wear. Whether you're a beginner or looking to refine your skills, these techniques will help you achieve beautiful eye makeup effortlessly.</p>
+
+    <h2>Table of Contents</h2>
+    <ol>
+        <li><a href="#choose">Choosing Eyeshadow Colors</a></li>
+        <li><a href="#prepare">Preparing Your Eyelids</a></li>
+        <li><a href="#application">Applying Eyeshadow</a></li>
+        <li><a href="#blending">Blending Techniques</a></li>
+        <li><a href="#highlight">Adding Highlight</a></li>
+        <li><a href="#tips">Additional Tips</a></li>
+    </ol>
+
+    <section id="choose">
+        <h2>1. Choosing Eyeshadow Colors</h2>
+        <p>Choosing the right eyeshadow colors can make a significant difference in your eye makeup:</p>
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<style>
+    html, body {
+        width: 100%;
+        overflow-x: hidden; /* Mencegah scrollbar horizontal */
+    }
+
+    /* Swiper Container */
+    .swiper-container {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Swiper Slide */
+    .swiper-slide {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        min-height: 300px; /* Set a minimum height for slides */
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box; /* Ensure padding and border are included in the width and height */
+    }
+
+    .swiper-slide img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover; /* Ensure the image covers the slide area */
+        display: block; /* Prevent extra space below images */
+    }
+
+    /* Slide Heading */
+    .slide-heading {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        color: white;
+        background-color: rgba(0, 0, 0, 0); /* 100% transparan */
+        padding: 10px;
+        margin: 0;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Shadow hitam */
+        z-index: 10;
+    }
+
+    /* Hide Pagination */
+    .swiper-pagination {
+        display: none;
+    }
+
+    /* Navigation Buttons */
+    .swiper-button-next,
+    .swiper-button-prev {
+        color: #fff; /* White color for the arrows */
+    }
+
+    /* Optional: Style for button on hover */
+    .swiper-button-next:hover,
+    .swiper-button-prev:hover {
+        color: #f0f0f0; /* Slightly different white on hover */
+    }
+
+    /* Link styling */
+    .slide-link {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 5;
+        text-decoration: none;
+    }
+</style>
+
+<!-- Swiper -->
+<div class="swiper-container">
+    <div class="swiper-wrapper" id="gallery-wrapper">
+        <!-- Slides will be dynamically added here -->
+    </div>
+    <!-- Add Navigation -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</div>
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script type="text/javascript">
+    // Initialize Swiper
+    var swiper = new Swiper('.swiper-container', {
+        direction: 'horizontal',
+        loop: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+
+    // Label for filtering posts
+    var bcd140526_index_label = 'aylinselvim';
+
+    // Function to fetch and display posts
+    function loadPosts() {
+        var script_url = `https://healtyheapi.blogspot.com/feeds/posts/default/-/${encodeURIComponent(bcd140526_index_label)}?start-index=1&max-results=6666&alt=json-in-script&callback=displayPosts`;
+        var script = document.createElement('script');
+        script.src = script_url;
+        document.body.appendChild(script);
+    }
+
+    function displayPosts(data) {
+        var wrapper = document.getElementById('gallery-wrapper');
+        wrapper.innerHTML = ''; // Clear existing slides
+
+        data.feed.entry.forEach(function(entry) {
+            var thumbnail = entry.media$thumbnail ? entry.media$thumbnail.url : '';
+            var link = entry.link.find(link => link.rel === 'alternate').href;
+            var title = entry.title.$t;
+
+            if (thumbnail) {
+                // Ensure higher resolution image
+                if (thumbnail.includes('/s72-c/')) {
+                    thumbnail = thumbnail.replace('/s72-c/', '/s1600/');
+                } else if (thumbnail.includes('=s72-c')) {
+                    thumbnail = thumbnail.replace('=s72-c', '=s1600');
+                }
+
+                var slide = document.createElement('div');
+                slide.className = 'swiper-slide';
+                slide.innerHTML = `
+                    <a href="${link}" class="slide-link" target="_blank"></a>
+                    <img src="${thumbnail}" alt="${title}" loading="lazy">
+                    <div class="slide-heading">${title}</div>
+                `;
+                wrapper.appendChild(slide);
+            }
+        });
+
+        swiper.update(); // Update Swiper after adding slides
+    }
+
+    loadPosts();
+</script>        <ul>
+            <li><strong>Neutral Shades:</strong> Start with neutral shades like taupe, beige, or soft brown for a natural look that complements any outfit.</li>
+            <li><strong>Complementary Colors:</strong> Experiment with shades that complement your eye color. For example, purples and plums enhance green eyes, while warm browns and golds complement blue eyes.</li>
+            <li><strong>Monochromatic Looks:</strong> Create a cohesive look by using varying shades of the same color family (e.g., light to dark browns) for depth and dimension.</li>
+        </ul>
+    </section>
+
+    <section id="prepare">
+        <h2>2. Preparing Your Eyelids</h2>
+        <p>Prepare your eyelids to ensure smooth and long-lasting eyeshadow application:</p>
+        <ul>
+            <li><strong>Prime:</strong> Apply an eyeshadow primer to create a smooth base, prevent creasing, and enhance color payoff.</li>
+            <li><strong>Set:</strong> Dust translucent powder over the primer to set it and create a matte base for easier blending.</li>
+        </ul>
+    </section>
+
+    <section id="application">
+        <h2>3. Applying Eyeshadow</h2>
+        <p>Apply eyeshadow using simple techniques for a beautiful eye look:</p>
+        <ul>
+            <li><strong>Base Shade:</strong> Apply a neutral shade all over your eyelid from lash line to brow bone using a flat eyeshadow brush.</li>
+            <li><strong>Crease Shade:</strong> Use a slightly darker shade in the crease of your eyelid to add depth. Blend using a fluffy blending brush in windshield wiper motions.</li>
+            <li><strong>Accent Shade:</strong> Optionally, apply a shimmer or satin shade to the center of your eyelid for a pop of brightness. Use your fingertip for better color payoff.</li>
+        </ul>
+    </section>
+
+    <section id="blending">
+        <h2>4. Blending Techniques</h2>
+        <p>Blend eyeshadow seamlessly for a polished finish:</p>
+        <ul>
+            <li><strong>Windshield Wiper Motion:</strong> Use back-and-forth motions with a clean blending brush to blend harsh lines between shades for a seamless transition.</li>
+            <li><strong>Circular Blending:</strong> Soften edges and blend colors together using small circular motions, focusing on the crease and outer corner of your eye.</li>
+            <li><strong>Softening:</strong> Use a clean brush or a blending sponge to soften any harsh edges and ensure a flawless gradient of colors.</li>
+        </ul>
+    </section>
+
+    <section id="highlight">
+        <h2>5. Adding Highlight</h2>
+        <p>Highlight your eyes for a finishing touch:</p>
+        <ul>
+            <li><strong>Brow Bone:</strong> Apply a matte or shimmer highlight shade beneath your eyebrow arch to lift and define your brow bone.</li>
+            <li><strong>Inner Corner:</strong> Brighten your eyes by applying a light, shimmering eyeshadow to the inner corner using a small brush or your fingertip.</li>
+            <li><strong>Under Eye:</strong> Optionally, apply a touch of eyeshadow along your lower lash line to balance your eye look, using a smudge brush for a subtle effect.</li>
+        </ul>
+    </section>
+
+    <section id="tips">
+        <h2>6. Additional Tips</h2>
+        <p>Enhance your simple eyeshadow looks with these expert tips:</p>
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<style>
+    html, body {
+        width: 100%;
+        overflow-x: hidden; /* Mencegah scrollbar horizontal */
+    }
+
+    /* Swiper Container */
+    .swiper-container {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Swiper Slide */
+    .swiper-slide {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        min-height: 300px; /* Set a minimum height for slides */
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box; /* Ensure padding and border are included in the width and height */
+    }
+
+    .swiper-slide img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover; /* Ensure the image covers the slide area */
+        display: block; /* Prevent extra space below images */
+    }
+
+    /* Slide Heading */
+    .slide-heading {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        color: white;
+        background-color: rgba(0, 0, 0, 0); /* 100% transparan */
+        padding: 10px;
+        margin: 0;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Shadow hitam */
+        z-index: 10;
+    }
+
+    /* Hide Pagination */
+    .swiper-pagination {
+        display: none;
+    }
+
+    /* Navigation Buttons */
+    .swiper-button-next,
+    .swiper-button-prev {
+        color: #fff; /* White color for the arrows */
+    }
+
+    /* Optional: Style for button on hover */
+    .swiper-button-next:hover,
+    .swiper-button-prev:hover {
+        color: #f0f0f0; /* Slightly different white on hover */
+    }
+
+    /* Link styling */
+    .slide-link {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 5;
+        text-decoration: none;
+    }
+</style>
+
+<!-- Swiper -->
+<div class="swiper-container">
+    <div class="swiper-wrapper" id="gallery-wrapper">
+        <!-- Slides will be dynamically added here -->
+    </div>
+    <!-- Add Navigation -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</div>
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script type="text/javascript">
+    // Initialize Swiper
+    var swiper = new Swiper('.swiper-container', {
+        direction: 'horizontal',
+        loop: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+
+    // Label for filtering posts
+    var bcd140526_index_label = 'aylin selvi';
+
+    // Function to fetch and display posts
+    function loadPosts() {
+        var script_url = `https://healtyheapi.blogspot.com/feeds/posts/default/-/${encodeURIComponent(bcd140526_index_label)}?start-index=1&max-results=6666&alt=json-in-script&callback=displayPosts`;
+        var script = document.createElement('script');
+        script.src = script_url;
+        document.body.appendChild(script);
+    }
+
+    function displayPosts(data) {
+        var wrapper = document.getElementById('gallery-wrapper');
+        wrapper.innerHTML = ''; // Clear existing slides
+
+        data.feed.entry.forEach(function(entry) {
+            var thumbnail = entry.media$thumbnail ? entry.media$thumbnail.url : '';
+            var link = entry.link.find(link => link.rel === 'alternate').href;
+            var title = entry.title.$t;
+
+            if (thumbnail) {
+                // Ensure higher resolution image
+                if (thumbnail.includes('/s72-c/')) {
+                    thumbnail = thumbnail.replace('/s72-c/', '/s1600/');
+                } else if (thumbnail.includes('=s72-c')) {
+                    thumbnail = thumbnail.replace('=s72-c', '=s1600');
+                }
+
+                var slide = document.createElement('div');
+                slide.className = 'swiper-slide';
+                slide.innerHTML = `
+                    <a href="${link}" class="slide-link" target="_blank"></a>
+                    <img src="${thumbnail}" alt="${title}" loading="lazy">
+                    <div class="slide-heading">${title}</div>
+                `;
+                wrapper.appendChild(slide);
+            }
+        });
+
+        swiper.update(); // Update Swiper after adding slides
+    }
+
+    loadPosts();
+</script>        <ul>
+            <li><strong>Practice Patience:</strong> Take your time to blend eyeshadow colors seamlessly for a professional finish.</li>
+            <li><strong>Experiment:</strong> Don't be afraid to experiment with different eyeshadow textures, finishes, and colors to discover what suits you best.</li>
+            <li><strong>Clean Tools:</strong> Regularly clean your eyeshadow brushes and sponges to prevent color transfer and maintain optimal makeup application.</li>
+        </ul>
+    </section>
+
+    <p>By following these techniques and tips for creating simple eyeshadow looks, you can effortlessly enhance your eyes and achieve a polished makeup look suitable for any occasion. Practice and experiment with different shades and techniques to find your signature eye makeup style.</p>
