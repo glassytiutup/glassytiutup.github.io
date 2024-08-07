@@ -1,0 +1,376 @@
+---
+layout: x4
+title:  "Aylin Selvi - Basic Makeup Tutorials - Applying Foundation"
+author: admin
+categories: [basic-makeup-tutorials]
+image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgZN3rXMmbhExNid_T9XvzCpztqdwq1iaSxK6jhfFtCbP0rxfWZuKgCXVXK6NmaEsN-LRdemxq5hfHoWQ5IuZLdAdK9rzps3ajvJwC8AMSHAmod97DaaBD8i2b81FtsC0kFs_mwKoyX4djrLDeJ-n7XWmV_HJV-aDXQCHWh-EawCXvPglp4563TuHCMlTw/s1600/20240729_114400.jpg"
+---
+
+
+
+
+    
+    
+
+    <p>Foundation is a fundamental step in any makeup routine, providing a smooth and even base for the rest of your makeup. Mastering the application of foundation ensures a flawless complexion that enhances your natural beauty. This tutorial covers essential techniques and tips for applying foundation effectively.</p>
+
+    <h2>Table of Contents</h2>
+    <ol>
+        <li><a href="#choose">Choosing the Right Foundation</a></li>
+        <li><a href="#prepare">Preparing Your Skin</a></li>
+        <li><a href="#application">Applying Foundation</a></li>
+        <li><a href="#blending">Blending Techniques</a></li>
+        <li><a href="#setting">Setting Your Foundation</a></li>
+        <li><a href="#tips">Additional Tips</a></li>
+    </ol>
+
+    <section id="choose">
+        <h2>1. Choosing the Right Foundation</h2>
+  <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<style>
+    html, body {
+        width: 100%;
+        overflow-x: hidden; /* Mencegah scrollbar horizontal */
+    }
+
+    /* Swiper Container */
+    .swiper-container {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Swiper Slide */
+    .swiper-slide {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        min-height: 300px; /* Set a minimum height for slides */
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box; /* Ensure padding and border are included in the width and height */
+    }
+
+    .swiper-slide img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover; /* Ensure the image covers the slide area */
+        display: block; /* Prevent extra space below images */
+    }
+
+    /* Slide Heading */
+    .slide-heading {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        color: white;
+        background-color: rgba(0, 0, 0, 0); /* 100% transparan */
+        padding: 10px;
+        margin: 0;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Shadow hitam */
+        z-index: 10;
+    }
+
+    /* Hide Pagination */
+    .swiper-pagination {
+        display: none;
+    }
+
+    /* Navigation Buttons */
+    .swiper-button-next,
+    .swiper-button-prev {
+        color: #fff; /* White color for the arrows */
+    }
+
+    /* Optional: Style for button on hover */
+    .swiper-button-next:hover,
+    .swiper-button-prev:hover {
+        color: #f0f0f0; /* Slightly different white on hover */
+    }
+
+    /* Link styling */
+    .slide-link {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 5;
+        text-decoration: none;
+    }
+</style>
+
+<!-- Swiper -->
+<div class="swiper-container">
+    <div class="swiper-wrapper" id="gallery-wrapper">
+        <!-- Slides will be dynamically added here -->
+    </div>
+    <!-- Add Navigation -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</div>
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script type="text/javascript">
+    // Initialize Swiper
+    var swiper = new Swiper('.swiper-container', {
+        direction: 'horizontal',
+        loop: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+
+    // Label for filtering posts
+    var bcd140526_index_label = 'aylinselvim';
+
+    // Function to fetch and display posts
+    function loadPosts() {
+        var script_url = `https://healtyheapi.blogspot.com/feeds/posts/default/-/${encodeURIComponent(bcd140526_index_label)}?start-index=1&max-results=6666&alt=json-in-script&callback=displayPosts`;
+        var script = document.createElement('script');
+        script.src = script_url;
+        document.body.appendChild(script);
+    }
+
+    function displayPosts(data) {
+        var wrapper = document.getElementById('gallery-wrapper');
+        wrapper.innerHTML = ''; // Clear existing slides
+
+        data.feed.entry.forEach(function(entry) {
+            var thumbnail = entry.media$thumbnail ? entry.media$thumbnail.url : '';
+            var link = entry.link.find(link => link.rel === 'alternate').href;
+            var title = entry.title.$t;
+
+            if (thumbnail) {
+                // Ensure higher resolution image
+                if (thumbnail.includes('/s72-c/')) {
+                    thumbnail = thumbnail.replace('/s72-c/', '/s1600/');
+                } else if (thumbnail.includes('=s72-c')) {
+                    thumbnail = thumbnail.replace('=s72-c', '=s1600');
+                }
+
+                var slide = document.createElement('div');
+                slide.className = 'swiper-slide';
+                slide.innerHTML = `
+                    <a href="${link}" class="slide-link" target="_blank"></a>
+                    <img src="${thumbnail}" alt="${title}" loading="lazy">
+                    <div class="slide-heading">${title}</div>
+                `;
+                wrapper.appendChild(slide);
+            }
+        });
+
+        swiper.update(); // Update Swiper after adding slides
+    }
+
+    loadPosts();
+</script>      <p>Choosing the correct foundation shade and formula is essential for achieving a seamless makeup look. Consider your skin type (dry, oily, combination) and desired coverage level:</p>
+        <ul>
+            <li><strong>Formulas:</strong> Liquid, cream, powder, or stick foundations offer different finishes and coverage options. Liquid foundations are versatile and blend easily, while cream foundations provide more coverage and hydration. Powder foundations are ideal for oily skin, offering a matte finish, and stick foundations are convenient for touch-ups.</li>
+            <li><strong>Shade Matching:</strong> Test foundation shades on your jawline or neck in natural light to find the closest match to your skin tone. Avoid foundations that appear too orange, pink, or ashy.</li>
+        </ul>
+    </section>
+
+    <section id="prepare">
+        <h2>2. Preparing Your Skin</h2>
+        <p>Prepping your skin ensures a smooth canvas for foundation application:</p>
+        <ul>
+            <li><strong>Cleansing:</strong> Cleanse your face to remove dirt, oil, and impurities. Follow with toner and moisturizer suitable for your skin type.</li>
+            <li><strong>Priming:</strong> Apply a primer to smooth texture, minimize pores, and extend the wear of your foundation. Choose a primer based on your skin concerns, such as mattifying for oily skin or hydrating for dry skin.</li>
+        </ul>
+    </section>
+
+    <section id="application">
+        <h2>3. Applying Foundation</h2>
+        <p>Apply foundation using your preferred method for seamless coverage:</p>
+        <ul>
+            <li><strong>Brush:</strong> Use a foundation brush for precise application and blending. Apply foundation in downward strokes, starting from the center of your face and blending outward.</li>
+            <li><strong>Sponge:</strong> Dampen a makeup sponge and dab foundation onto your skin. Blend using a bouncing motion to achieve a natural, airbrushed finish.</li>
+            <li><strong>Fingers:</strong> Warm foundation between your fingertips and gently press onto your skin. Blend using circular motions for even coverage.</li>
+        </ul>
+    </section>
+
+    <section id="blending">
+        <h2>4. Blending Techniques</h2>
+        <p>Blend foundation seamlessly for a natural-looking finish:</p>
+        <ul>
+            <li><strong>Buffing:</strong> Use circular motions with a brush or sponge to blend foundation into your skin, ensuring no harsh lines or streaks.</li>
+            <li><strong>Feathering:</strong> Feather out edges of foundation around your jawline, hairline, and neck to avoid a visible line of demarcation.</li>
+            <li><strong>Layering:</strong> Build coverage gradually by layering thin coats of foundation where needed. Focus on areas that require more coverage, such as redness or blemishes.</li>
+        </ul>
+    </section>
+
+    <section id="setting">
+        <h2>5. Setting Your Foundation</h2>
+        <p>Set foundation for long-lasting wear and a matte finish:</p>
+ <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<style>
+    html, body {
+        width: 100%;
+        overflow-x: hidden; /* Mencegah scrollbar horizontal */
+    }
+
+    /* Swiper Container */
+    .swiper-container {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Swiper Slide */
+    .swiper-slide {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        min-height: 300px; /* Set a minimum height for slides */
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box; /* Ensure padding and border are included in the width and height */
+    }
+
+    .swiper-slide img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover; /* Ensure the image covers the slide area */
+        display: block; /* Prevent extra space below images */
+    }
+
+    /* Slide Heading */
+    .slide-heading {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        color: white;
+        background-color: rgba(0, 0, 0, 0); /* 100% transparan */
+        padding: 10px;
+        margin: 0;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Shadow hitam */
+        z-index: 10;
+    }
+
+    /* Hide Pagination */
+    .swiper-pagination {
+        display: none;
+    }
+
+    /* Navigation Buttons */
+    .swiper-button-next,
+    .swiper-button-prev {
+        color: #fff; /* White color for the arrows */
+    }
+
+    /* Optional: Style for button on hover */
+    .swiper-button-next:hover,
+    .swiper-button-prev:hover {
+        color: #f0f0f0; /* Slightly different white on hover */
+    }
+
+    /* Link styling */
+    .slide-link {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 5;
+        text-decoration: none;
+    }
+</style>
+
+<!-- Swiper -->
+<div class="swiper-container">
+    <div class="swiper-wrapper" id="gallery-wrapper">
+        <!-- Slides will be dynamically added here -->
+    </div>
+    <!-- Add Navigation -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</div>
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script type="text/javascript">
+    // Initialize Swiper
+    var swiper = new Swiper('.swiper-container', {
+        direction: 'horizontal',
+        loop: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+
+    // Label for filtering posts
+    var bcd140526_index_label = 'aylin selvi';
+
+    // Function to fetch and display posts
+    function loadPosts() {
+        var script_url = `https://healtyheapi.blogspot.com/feeds/posts/default/-/${encodeURIComponent(bcd140526_index_label)}?start-index=1&max-results=6666&alt=json-in-script&callback=displayPosts`;
+        var script = document.createElement('script');
+        script.src = script_url;
+        document.body.appendChild(script);
+    }
+
+    function displayPosts(data) {
+        var wrapper = document.getElementById('gallery-wrapper');
+        wrapper.innerHTML = ''; // Clear existing slides
+
+        data.feed.entry.forEach(function(entry) {
+            var thumbnail = entry.media$thumbnail ? entry.media$thumbnail.url : '';
+            var link = entry.link.find(link => link.rel === 'alternate').href;
+            var title = entry.title.$t;
+
+            if (thumbnail) {
+                // Ensure higher resolution image
+                if (thumbnail.includes('/s72-c/')) {
+                    thumbnail = thumbnail.replace('/s72-c/', '/s1600/');
+                } else if (thumbnail.includes('=s72-c')) {
+                    thumbnail = thumbnail.replace('=s72-c', '=s1600');
+                }
+
+                var slide = document.createElement('div');
+                slide.className = 'swiper-slide';
+                slide.innerHTML = `
+                    <a href="${link}" class="slide-link" target="_blank"></a>
+                    <img src="${thumbnail}" alt="${title}" loading="lazy">
+                    <div class="slide-heading">${title}</div>
+                `;
+                wrapper.appendChild(slide);
+            }
+        });
+
+        swiper.update(); // Update Swiper after adding slides
+    }
+
+    loadPosts();
+</script>       <ul>
+            <li><strong>Translucent Powder:</strong> Dust translucent powder over your foundation using a fluffy brush to set makeup and control shine.</li>
+            <li><strong>Setting Spray:</strong> Finish with a setting spray to lock in makeup and extend its wear throughout the day. Choose a setting spray suitable for your skin type (e.g., mattifying for oily skin or hydrating for dry skin).</li>
+        </ul>
+    </section>
+
+    <section id="tips">
+        <h2>6. Additional Tips</h2>
+        <p>Enhance your foundation application with these expert tips:</p>
+        <ul>
+            <li><strong>Blend Downward:</strong> Blend foundation downward on facial hair to avoid accentuating peach fuzz.</li>
+            <li><strong>Mixing Formulas:</strong> Mix foundation formulas (e.g., liquid and powder) for customized coverage and finish.</li>
+            <li><strong>Touch-Ups:</strong> Carry a compact powder or blotting sheets for quick touch-ups throughout the day to absorb excess oil and maintain a fresh complexion.</li>
+        </ul>
+    </section>
+
+    <p>By mastering these techniques and tips for applying foundation, you can achieve a flawless base that enhances your natural complexion and sets the stage for the rest of your makeup look.</p>
