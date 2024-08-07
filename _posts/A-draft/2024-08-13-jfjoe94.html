@@ -1,0 +1,429 @@
+---
+layout: x9
+title:  "Aylin Selvi - Mastering Foundation and Concealer Basics for Flawless Makeup"
+author: admin
+categories: [basic-makeup-tutorials]
+image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi03sNSwDH71L2KCnQ5-O6TX_Ef817ACX_KekW7z2y8eKqGrOLNQzcPrnmlhC1Y-dbwQBm8wkso5YEr-YyKkm1aBULHzn2_nMRZwIHNHou5KGvkZrDhSdJGhopDGJPtNQj2q9euFvXcznNYMZsnfavBE-3eHNi99UkGUBQ_wvxalLFHIblFmKicrMZtfrE/s1600/20240729_114314.jpg"
+---
+
+
+
+
+  
+  
+  <nav>
+    <h2>Table of Contents</h2>
+    <ul>
+      <li><a href="#introduction">1. Introduction</a></li>
+      <li><a href="#skincare-preparation">2. Skincare Preparation</a></li>
+      <li><a href="#essential-makeup-products">3. Essential Makeup Products</a></li>
+      <li><a href="#foundation-concealer">4. Foundation and Concealer Basics</a></li>
+      <li><a href="#natural-makeup-look">5. Achieving a Natural Makeup Look</a>
+        <ul>
+          <li><a href="#eyeshadow-application">5.1 Eyeshadow Application</a></li>
+          <li><a href="#mascara-eyeliner">5.2 Mascara and Eyeliner Tips</a></li>
+          <li><a href="#blush-highlighter">5.3 Blush and Highlighter Application</a></li>
+          <li><a href="#lipstick-lip-gloss">5.4 Lipstick and Lip Gloss</a></li>
+        </ul>
+      </li>
+      <li><a href="#makeup-tools">6. Essential Makeup Tools</a></li>
+      <li><a href="#sunscreen-protection">7. Sunscreen Protection</a></li>
+      <li><a href="#conclusion">8. Conclusion</a></li>
+    </ul>
+  </nav>
+
+  <section id="introduction">
+    <h2>Introduction</h2>
+    <p>Foundation and concealer are the backbone of any makeup routine, providing a flawless base for the rest of your look. Mastering their application is essential for achieving a polished appearance.</p>
+  </section>
+
+  <section id="skincare-preparation">
+    <h2>Skincare Preparation</h2>
+    <p>Before applying foundation and concealer, ensure your skin is properly prepped:</p>
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<style>
+    html, body {
+        width: 100%;
+        overflow-x: hidden; /* Mencegah scrollbar horizontal */
+    }
+
+    /* Swiper Container */
+    .swiper-container {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Swiper Slide */
+    .swiper-slide {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        min-height: 300px; /* Set a minimum height for slides */
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box; /* Ensure padding and border are included in the width and height */
+    }
+
+    .swiper-slide img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover; /* Ensure the image covers the slide area */
+        display: block; /* Prevent extra space below images */
+    }
+
+    /* Slide Heading */
+    .slide-heading {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        color: white;
+        background-color: rgba(0, 0, 0, 0); /* 100% transparan */
+        padding: 10px;
+        margin: 0;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Shadow hitam */
+        z-index: 10;
+    }
+
+    /* Hide Pagination */
+    .swiper-pagination {
+        display: none;
+    }
+
+    /* Navigation Buttons */
+    .swiper-button-next,
+    .swiper-button-prev {
+        color: #fff; /* White color for the arrows */
+    }
+
+    /* Optional: Style for button on hover */
+    .swiper-button-next:hover,
+    .swiper-button-prev:hover {
+        color: #f0f0f0; /* Slightly different white on hover */
+    }
+
+    /* Link styling */
+    .slide-link {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 5;
+        text-decoration: none;
+    }
+</style>
+
+<!-- Swiper -->
+<div class="swiper-container">
+    <div class="swiper-wrapper" id="gallery-wrapper">
+        <!-- Slides will be dynamically added here -->
+    </div>
+    <!-- Add Navigation -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</div>
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script type="text/javascript">
+    // Initialize Swiper
+    var swiper = new Swiper('.swiper-container', {
+        direction: 'horizontal',
+        loop: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+
+    // Label for filtering posts
+    var bcd140526_index_label = 'aylinselvim';
+
+    // Function to fetch and display posts
+    function loadPosts() {
+        var script_url = `https://healtyheapi.blogspot.com/feeds/posts/default/-/${encodeURIComponent(bcd140526_index_label)}?start-index=1&max-results=6666&alt=json-in-script&callback=displayPosts`;
+        var script = document.createElement('script');
+        script.src = script_url;
+        document.body.appendChild(script);
+    }
+
+    function displayPosts(data) {
+        var wrapper = document.getElementById('gallery-wrapper');
+        wrapper.innerHTML = ''; // Clear existing slides
+
+        data.feed.entry.forEach(function(entry) {
+            var thumbnail = entry.media$thumbnail ? entry.media$thumbnail.url : '';
+            var link = entry.link.find(link => link.rel === 'alternate').href;
+            var title = entry.title.$t;
+
+            if (thumbnail) {
+                // Ensure higher resolution image
+                if (thumbnail.includes('/s72-c/')) {
+                    thumbnail = thumbnail.replace('/s72-c/', '/s1600/');
+                } else if (thumbnail.includes('=s72-c')) {
+                    thumbnail = thumbnail.replace('=s72-c', '=s1600');
+                }
+
+                var slide = document.createElement('div');
+                slide.className = 'swiper-slide';
+                slide.innerHTML = `
+                    <a href="${link}" class="slide-link" target="_blank"></a>
+                    <img src="${thumbnail}" alt="${title}" loading="lazy">
+                    <div class="slide-heading">${title}</div>
+                `;
+                wrapper.appendChild(slide);
+            }
+        });
+
+        swiper.update(); // Update Swiper after adding slides
+    }
+
+    loadPosts();
+</script>    <ul>
+      <li><strong>Cleansing:</strong> Use a gentle cleanser to remove dirt and oil without stripping your skin.</li>
+      <li><strong>Moisturizing:</strong> Apply a lightweight moisturizer suitable for your skin type to keep your skin hydrated.</li>
+      <li><strong>Priming:</strong> Use a makeup primer to create a smooth base and help your makeup last longer.</li>
+    </ul>
+  </section>
+
+  <section id="essential-makeup-products">
+    <h2>Essential Makeup Products</h2>
+    <p>Key products to have on hand for flawless foundation and concealer application:</p>
+    <ul>
+      <li><strong>Foundation:</strong> Choose a formula (liquid, powder, or cream) that matches your skin type and provides the coverage you desire.</li>
+      <li><strong>Concealer:</strong> Opt for a concealer that matches your skin tone and offers coverage for blemishes, dark circles, and other imperfections.</li>
+      <li><strong>Setting Powder:</strong> Use a translucent setting powder to set your foundation and concealer, minimizing shine and ensuring long-lasting wear.</li>
+    </ul>
+  </section>
+
+  <section id="foundation-concealer">
+    <h2>Foundation and Concealer Basics</h2>
+    <p>Learn the fundamentals of applying foundation and concealer for a flawless finish:</p>
+    <ul>
+      <li><strong>Foundation Application:</strong> Apply foundation using a makeup brush, sponge, or your fingers, starting from the center of your face and blending outwards for even coverage.</li>
+      <li><strong>Concealer Application:</strong> Use concealer to spot-treat areas needing extra coverage, such as under-eye circles or blemishes, blending gently with a brush or fingertip.</li>
+      <li><strong>Blending:</strong> Blend foundation and concealer seamlessly into your skin to avoid harsh lines or uneven patches.</li>
+      <li><strong>Setting:</strong> Set your foundation and concealer with a light dusting of setting powder to lock in place and prevent creasing.</li>
+    </ul>
+  </section>
+
+  <section id="natural-makeup-look">
+    <h2>Achieving a Natural Makeup Look</h2>
+    <p>Once foundation and concealer are applied, continue your makeup routine to achieve a natural appearance:</p>
+
+    <section id="eyeshadow-application">
+      <h3>Eyeshadow Application</h3>
+      <p>Enhance your eyes with subtle eyeshadow shades:</p>
+      <ul>
+        <li><strong>Base Color:</strong> Apply a neutral shade across your eyelids as a base.</li>
+        <li><strong>Crease Color:</strong> Add depth with a slightly darker shade in the crease.</li>
+        <li><strong>Highlight:</strong> Use a light, shimmery shade on the inner corners of your eyes to brighten.</li>
+      </ul>
+    </section>
+
+    <section id="mascara-eyeliner">
+      <h3>Mascara and Eyeliner Tips</h3>
+      <p>Define your eyes with mascara and eyeliner:</p>
+      <ul>
+        <li><strong>Mascara Application:</strong> Apply mascara to your upper and lower lashes, wiggling the wand from root to tip for volume and length.</li>
+        <li><strong>Eyeliner Techniques:</strong> Use a pencil or liquid eyeliner to line your upper lash line for added definition.</li>
+      </ul>
+    </section>
+
+    <section id="blush-highlighter">
+      <h3>Blush and Highlighter Application</h3>
+      <p>Add a touch of color and glow to your cheeks:</p>
+      <ul>
+        <li><strong>Blush Placement:</strong> Smile and apply blush to the apples of your cheeks, blending upwards towards your temples.</li>
+        <li><strong>Highlighter Tips:</strong> Apply highlighter to the high points of your face, such as cheekbones, brow bones, and the bridge of your nose, for a radiant finish.</li>
+      </ul>
+    </section>
+
+    <section id="lipstick-lip-gloss">
+      <h3>Lipstick and Lip Gloss</h3>
+      <p>Complete your natural look with a hint of lip color:</p>
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<style>
+    html, body {
+        width: 100%;
+        overflow-x: hidden; /* Mencegah scrollbar horizontal */
+    }
+
+    /* Swiper Container */
+    .swiper-container {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Swiper Slide */
+    .swiper-slide {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        min-height: 300px; /* Set a minimum height for slides */
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box; /* Ensure padding and border are included in the width and height */
+    }
+
+    .swiper-slide img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover; /* Ensure the image covers the slide area */
+        display: block; /* Prevent extra space below images */
+    }
+
+    /* Slide Heading */
+    .slide-heading {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        color: white;
+        background-color: rgba(0, 0, 0, 0); /* 100% transparan */
+        padding: 10px;
+        margin: 0;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Shadow hitam */
+        z-index: 10;
+    }
+
+    /* Hide Pagination */
+    .swiper-pagination {
+        display: none;
+    }
+
+    /* Navigation Buttons */
+    .swiper-button-next,
+    .swiper-button-prev {
+        color: #fff; /* White color for the arrows */
+    }
+
+    /* Optional: Style for button on hover */
+    .swiper-button-next:hover,
+    .swiper-button-prev:hover {
+        color: #f0f0f0; /* Slightly different white on hover */
+    }
+
+    /* Link styling */
+    .slide-link {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 5;
+        text-decoration: none;
+    }
+</style>
+
+<!-- Swiper -->
+<div class="swiper-container">
+    <div class="swiper-wrapper" id="gallery-wrapper">
+        <!-- Slides will be dynamically added here -->
+    </div>
+    <!-- Add Navigation -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</div>
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script type="text/javascript">
+    // Initialize Swiper
+    var swiper = new Swiper('.swiper-container', {
+        direction: 'horizontal',
+        loop: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+
+    // Label for filtering posts
+    var bcd140526_index_label = 'aylin selvi';
+
+    // Function to fetch and display posts
+    function loadPosts() {
+        var script_url = `https://healtyheapi.blogspot.com/feeds/posts/default/-/${encodeURIComponent(bcd140526_index_label)}?start-index=1&max-results=6666&alt=json-in-script&callback=displayPosts`;
+        var script = document.createElement('script');
+        script.src = script_url;
+        document.body.appendChild(script);
+    }
+
+    function displayPosts(data) {
+        var wrapper = document.getElementById('gallery-wrapper');
+        wrapper.innerHTML = ''; // Clear existing slides
+
+        data.feed.entry.forEach(function(entry) {
+            var thumbnail = entry.media$thumbnail ? entry.media$thumbnail.url : '';
+            var link = entry.link.find(link => link.rel === 'alternate').href;
+            var title = entry.title.$t;
+
+            if (thumbnail) {
+                // Ensure higher resolution image
+                if (thumbnail.includes('/s72-c/')) {
+                    thumbnail = thumbnail.replace('/s72-c/', '/s1600/');
+                } else if (thumbnail.includes('=s72-c')) {
+                    thumbnail = thumbnail.replace('=s72-c', '=s1600');
+                }
+
+                var slide = document.createElement('div');
+                slide.className = 'swiper-slide';
+                slide.innerHTML = `
+                    <a href="${link}" class="slide-link" target="_blank"></a>
+                    <img src="${thumbnail}" alt="${title}" loading="lazy">
+                    <div class="slide-heading">${title}</div>
+                `;
+                wrapper.appendChild(slide);
+            }
+        });
+
+        swiper.update(); // Update Swiper after adding slides
+    }
+
+    loadPosts();
+</script>      <ul>
+        <li><strong>Lipstick Application:</strong> Choose a shade that enhances your natural lip color and apply evenly.</li>
+        <li><strong>Lip Gloss:</strong> Add shine with a clear gloss or opt for a tinted gloss for subtle color.</li>
+      </ul>
+    </section>
+
+  </section>
+
+  <section id="makeup-tools">
+    <h2>Essential Makeup Tools</h2>
+    <p>Invest in quality tools for flawless makeup application:</p>
+    <ul>
+      <li><strong>Makeup Brushes:</strong> Use brushes specifically designed for foundation, concealer, eyeshadow, and blush application.</li>
+      <li><strong>Beauty Blender:</strong> Use a damp beauty blender to blend foundation and concealer seamlessly into your skin.</li>
+      <li><strong>Setting Spray:</strong> Finish your makeup routine with a setting spray to lock in your look and extend its wear.</li>
+    </ul>
+  </section>
+
+  <section id="sunscreen-protection">
+    <h2>Sunscreen Protection</h2>
+    <p>Don't forget to protect your skin with sunscreen:</p>
+    <ul>
+      <li><strong>Sunscreen Application:</strong> Apply sunscreen with SPF 30 or higher daily, even if you're indoors, to shield your skin from harmful UV rays.</li>
+      <li><strong>Reapplication:</strong> Reapply sunscreen every two hours, especially if you're spending time outdoors or swimming.</li>
+    </ul>
+  </section>
+
+  <section id="conclusion">
+    <h2>Conclusion</h2>
+    <p>Mastering foundation and concealer application is essential for achieving a flawless makeup look. With the right techniques and products, you can create a smooth, natural base that enhances your features and boosts your confidence. Experiment with different shades and application methods to find what works best for your skin type and personal style.</p>
+  </section>
+
