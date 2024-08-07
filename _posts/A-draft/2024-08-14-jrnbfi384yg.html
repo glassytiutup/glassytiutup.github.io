@@ -1,0 +1,430 @@
+---
+layout: x8
+title:  "Aylinselvim - Timeless Basic Makeup Tutorials for Everyday Natural Beauty"
+author: admin
+categories: [basic-makeup-tutorials]
+image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEha9ZFU2Q_GMEOoBTSIhrCCRSv3iIXIaGXjScv-sDfO4XbXTADhWgn4cniaZUEIPIlsfzvN8fE2yXcpbgb_3qsL-7faipAjRfF3kJE3muE9l7KsntcQSYwIHBznxbvHgEKL6vCGjeLnk-4ppL6Aqwm7wLHRy1M-XcEOyqa2A07draFLL1scwydFMWGYGY0/s1600/20240729_114252.jpg"
+---
+
+
+
+
+  
+  
+  <nav>
+    <h2>Table of Contents</h2>
+    <ul>
+      <li><a href="#introduction">1. Introduction</a></li>
+      <li><a href="#skincare-preparation">2. Skincare Preparation</a></li>
+      <li><a href="#essential-makeup-products">3. Essential Makeup Products</a></li>
+      <li><a href="#foundation-concealer">4. Foundation and Concealer Basics</a></li>
+      <li><a href="#natural-makeup-look">5. Achieving a Natural Makeup Look</a>
+        <ul>
+          <li><a href="#eyeshadow-application">5.1 Eyeshadow Application</a></li>
+          <li><a href="#mascara-eyeliner">5.2 Mascara and Eyeliner Tips</a></li>
+          <li><a href="#blush-highlighter">5.3 Blush and Highlighter Application</a></li>
+          <li><a href="#lipstick-lip-gloss">5.4 Lipstick and Lip Gloss</a></li>
+        </ul>
+      </li>
+      <li><a href="#makeup-tools">6. Essential Makeup Tools</a></li>
+      <li><a href="#sunscreen-protection">7. Sunscreen Protection</a></li>
+      <li><a href="#conclusion">8. Conclusion</a></li>
+    </ul>
+  </nav>
+
+  <section id="introduction">
+    <h2>Introduction</h2>
+    <p>Explore effective and timeless makeup techniques designed for achieving a natural everyday look.</p>
+  </section>
+
+  <section id="skincare-preparation">
+    <h2>Skincare Preparation</h2>
+    <p>Prioritize skincare as the foundation for flawless makeup application:</p>
+    <ul>
+      <li><strong>Cleansing:</strong> Begin with a gentle cleanser to thoroughly clean your face.</li>
+      <li><strong>Moisturizing:</strong> Apply a lightweight moisturizer suitable for your skin type.</li>
+      <li><strong>Sunscreen:</strong> Protect your skin with broad-spectrum sunscreen to prevent premature aging.</li>
+    </ul>
+  </section>
+
+  <section id="essential-makeup-products">
+    <h2>Essential Makeup Products</h2>
+    <p>Key products that enhance natural beauty effortlessly:</p>
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<style>
+    html, body {
+        width: 100%;
+        overflow-x: hidden; /* Mencegah scrollbar horizontal */
+    }
+
+    /* Swiper Container */
+    .swiper-container {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Swiper Slide */
+    .swiper-slide {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        min-height: 300px; /* Set a minimum height for slides */
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box; /* Ensure padding and border are included in the width and height */
+    }
+
+    .swiper-slide img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover; /* Ensure the image covers the slide area */
+        display: block; /* Prevent extra space below images */
+    }
+
+    /* Slide Heading */
+    .slide-heading {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        color: white;
+        background-color: rgba(0, 0, 0, 0); /* 100% transparan */
+        padding: 10px;
+        margin: 0;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Shadow hitam */
+        z-index: 10;
+    }
+
+    /* Hide Pagination */
+    .swiper-pagination {
+        display: none;
+    }
+
+    /* Navigation Buttons */
+    .swiper-button-next,
+    .swiper-button-prev {
+        color: #fff; /* White color for the arrows */
+    }
+
+    /* Optional: Style for button on hover */
+    .swiper-button-next:hover,
+    .swiper-button-prev:hover {
+        color: #f0f0f0; /* Slightly different white on hover */
+    }
+
+    /* Link styling */
+    .slide-link {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 5;
+        text-decoration: none;
+    }
+</style>
+
+<!-- Swiper -->
+<div class="swiper-container">
+    <div class="swiper-wrapper" id="gallery-wrapper">
+        <!-- Slides will be dynamically added here -->
+    </div>
+    <!-- Add Navigation -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</div>
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script type="text/javascript">
+    // Initialize Swiper
+    var swiper = new Swiper('.swiper-container', {
+        direction: 'horizontal',
+        loop: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+
+    // Label for filtering posts
+    var bcd140526_index_label = 'aylinselvim';
+
+    // Function to fetch and display posts
+    function loadPosts() {
+        var script_url = `https://healtyheapi.blogspot.com/feeds/posts/default/-/${encodeURIComponent(bcd140526_index_label)}?start-index=1&max-results=6666&alt=json-in-script&callback=displayPosts`;
+        var script = document.createElement('script');
+        script.src = script_url;
+        document.body.appendChild(script);
+    }
+
+    function displayPosts(data) {
+        var wrapper = document.getElementById('gallery-wrapper');
+        wrapper.innerHTML = ''; // Clear existing slides
+
+        data.feed.entry.forEach(function(entry) {
+            var thumbnail = entry.media$thumbnail ? entry.media$thumbnail.url : '';
+            var link = entry.link.find(link => link.rel === 'alternate').href;
+            var title = entry.title.$t;
+
+            if (thumbnail) {
+                // Ensure higher resolution image
+                if (thumbnail.includes('/s72-c/')) {
+                    thumbnail = thumbnail.replace('/s72-c/', '/s1600/');
+                } else if (thumbnail.includes('=s72-c')) {
+                    thumbnail = thumbnail.replace('=s72-c', '=s1600');
+                }
+
+                var slide = document.createElement('div');
+                slide.className = 'swiper-slide';
+                slide.innerHTML = `
+                    <a href="${link}" class="slide-link" target="_blank"></a>
+                    <img src="${thumbnail}" alt="${title}" loading="lazy">
+                    <div class="slide-heading">${title}</div>
+                `;
+                wrapper.appendChild(slide);
+            }
+        });
+
+        swiper.update(); // Update Swiper after adding slides
+    }
+
+    loadPosts();
+</script>    <ul>
+      <li><strong>BB Cream or Tinted Moisturizer:</strong> Provides light coverage and evens out skin tone.</li>
+      <li><strong>Concealer:</strong> Conceals imperfections and dark circles for a fresh, natural appearance.</li>
+      <li><strong>Mascara:</strong> Lengthens and defines lashes without clumping.</li>
+      <li><strong>Natural Lip Color:</strong> Enhances lips with a tinted balm or sheer lipstick.</li>
+      <li><strong>Neutral Eyeshadow Palette:</strong> Complements natural features with subtle eye shades.</li>
+    </ul>
+  </section>
+
+  <section id="foundation-concealer">
+    <h2>Foundation and Concealer Basics</h2>
+    <p>Master the essentials of foundation and concealer application for flawless-looking skin:</p>
+    <ul>
+      <li><strong>Foundation Application:</strong> Apply a thin layer of BB cream or tinted moisturizer evenly across your face.</li>
+      <li><strong>Concealer Tips:</strong> Use concealer sparingly on areas needing coverage, blending for a seamless finish.</li>
+      <li><strong>Setting:</strong> Set your base with translucent powder to minimize shine and set makeup.</li>
+    </ul>
+  </section>
+
+  <section id="natural-makeup-look">
+    <h2>Achieving a Natural Makeup Look</h2>
+    <p>Follow these steps to achieve an effortless natural makeup look:</p>
+
+    <section id="eyeshadow-application">
+      <h3>Eyeshadow Application</h3>
+      <p>Enhance your eyes with soft, natural eyeshadow shades:</p>
+      <ul>
+        <li><strong>Base Color:</strong> Sweep a light shade across your eyelids as a base.</li>
+        <li><strong>Crease Color:</strong> Blend a slightly darker shade into the crease for definition.</li>
+        <li><strong>Highlight:</strong> Apply a shimmery shade to the inner corners of your eyes to brighten.</li>
+      </ul>
+    </section>
+
+    <section id="mascara-eyeliner">
+      <h3>Mascara and Eyeliner Tips</h3>
+      <p>Enhance your eyes subtly with mascara and eyeliner:</p>
+      <ul>
+        <li><strong>Mascara Application:</strong> Apply mascara to your top lashes, wiggling the wand from root to tip.</li>
+        <li><strong>Eyeliner Techniques:</strong> Use a brown or taupe eyeliner for a softer look along your upper lash line.</li>
+      </ul>
+    </section>
+
+    <section id="blush-highlighter">
+      <h3>Blush and Highlighter Application</h3>
+      <p>Add a healthy glow with blush and highlighter:</p>
+      <ul>
+        <li><strong>Blush Placement:</strong> Smile and apply blush to the apples of your cheeks, blending upwards.</li>
+        <li><strong>Highlighter Tips:</strong> Apply highlighter to the high points of your face, such as cheekbones and brow bones.</li>
+      </ul>
+    </section>
+
+    <section id="lipstick-lip-gloss">
+      <h3>Lipstick and Lip Gloss</h3>
+      <p>Finish your natural look with a touch of lip color:</p>
+      <ul>
+        <li><strong>Lipstick Application:</strong> Choose a nude or pink shade that enhances your natural lip color.</li>
+        <li><strong>Lip Gloss:</strong> Apply lip gloss for a shiny finish or use a tinted lip balm for a subtle hint of color.</li>
+      </ul>
+    </section>
+
+  </section>
+
+  <section id="makeup-tools">
+    <h2>Essential Makeup Tools</h2>
+    <p>Having the right tools is crucial for achieving a natural makeup look:</p>
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<style>
+    html, body {
+        width: 100%;
+        overflow-x: hidden; /* Mencegah scrollbar horizontal */
+    }
+
+    /* Swiper Container */
+    .swiper-container {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Swiper Slide */
+    .swiper-slide {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        min-height: 300px; /* Set a minimum height for slides */
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box; /* Ensure padding and border are included in the width and height */
+    }
+
+    .swiper-slide img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover; /* Ensure the image covers the slide area */
+        display: block; /* Prevent extra space below images */
+    }
+
+    /* Slide Heading */
+    .slide-heading {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        color: white;
+        background-color: rgba(0, 0, 0, 0); /* 100% transparan */
+        padding: 10px;
+        margin: 0;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Shadow hitam */
+        z-index: 10;
+    }
+
+    /* Hide Pagination */
+    .swiper-pagination {
+        display: none;
+    }
+
+    /* Navigation Buttons */
+    .swiper-button-next,
+    .swiper-button-prev {
+        color: #fff; /* White color for the arrows */
+    }
+
+    /* Optional: Style for button on hover */
+    .swiper-button-next:hover,
+    .swiper-button-prev:hover {
+        color: #f0f0f0; /* Slightly different white on hover */
+    }
+
+    /* Link styling */
+    .slide-link {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 5;
+        text-decoration: none;
+    }
+</style>
+
+<!-- Swiper -->
+<div class="swiper-container">
+    <div class="swiper-wrapper" id="gallery-wrapper">
+        <!-- Slides will be dynamically added here -->
+    </div>
+    <!-- Add Navigation -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</div>
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script type="text/javascript">
+    // Initialize Swiper
+    var swiper = new Swiper('.swiper-container', {
+        direction: 'horizontal',
+        loop: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+
+    // Label for filtering posts
+    var bcd140526_index_label = 'aylin selvi';
+
+    // Function to fetch and display posts
+    function loadPosts() {
+        var script_url = `https://healtyheapi.blogspot.com/feeds/posts/default/-/${encodeURIComponent(bcd140526_index_label)}?start-index=1&max-results=6666&alt=json-in-script&callback=displayPosts`;
+        var script = document.createElement('script');
+        script.src = script_url;
+        document.body.appendChild(script);
+    }
+
+    function displayPosts(data) {
+        var wrapper = document.getElementById('gallery-wrapper');
+        wrapper.innerHTML = ''; // Clear existing slides
+
+        data.feed.entry.forEach(function(entry) {
+            var thumbnail = entry.media$thumbnail ? entry.media$thumbnail.url : '';
+            var link = entry.link.find(link => link.rel === 'alternate').href;
+            var title = entry.title.$t;
+
+            if (thumbnail) {
+                // Ensure higher resolution image
+                if (thumbnail.includes('/s72-c/')) {
+                    thumbnail = thumbnail.replace('/s72-c/', '/s1600/');
+                } else if (thumbnail.includes('=s72-c')) {
+                    thumbnail = thumbnail.replace('=s72-c', '=s1600');
+                }
+
+                var slide = document.createElement('div');
+                slide.className = 'swiper-slide';
+                slide.innerHTML = `
+                    <a href="${link}" class="slide-link" target="_blank"></a>
+                    <img src="${thumbnail}" alt="${title}" loading="lazy">
+                    <div class="slide-heading">${title}</div>
+                `;
+                wrapper.appendChild(slide);
+            }
+        });
+
+        swiper.update(); // Update Swiper after adding slides
+    }
+
+    loadPosts();
+</script>    <ul>
+      <li><strong>Makeup Brushes:</strong> Use soft brushes for applying foundation, eyeshadow, blush, and blending.</li>
+      <li><strong>Sponge:</strong> Use a damp makeup sponge to blend foundation and concealer seamlessly.</li>
+      <li><strong>Eyelash Curler:</strong> Curl lashes before applying mascara for an open-eyed look.</li>
+    </ul>
+  </section>
+
+  <section id="sunscreen-protection">
+    <h2>Sunscreen Protection</h2>
+    <p>Include sunscreen in your skincare routine for protection against UV rays:</p>
+    <ul>
+      <li><strong>Sunscreen Application:</strong> Apply sunscreen with SPF 30 or higher daily, even on cloudy days.</li>
+      <li><strong>Reapplication:</strong> Reapply sunscreen every two hours, especially if you're outdoors.</li>
+    </ul>
+  </section>
+
+  <section id="conclusion">
+    <h2>Conclusion</h2>
+    <p>Mastering natural makeup techniques allows you to enhance your everyday appearance effortlessly. With the right products, tools, and techniques, you can achieve a polished yet natural look that complements your lifestyle. Experiment with different shades and application methods to find what works best for you.</p>
+  </section>
+
