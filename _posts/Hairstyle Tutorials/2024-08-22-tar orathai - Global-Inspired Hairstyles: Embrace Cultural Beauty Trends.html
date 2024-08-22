@@ -127,18 +127,100 @@ image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhzfR7ipyJpYCO
       <li><strong>Connect the Wing:</strong> Connect the end of the wing to the middle of your upper lash line. This will form the base of your winged shape. Ensure that the line is smooth and even.</li>
     </ol>
   </section>
-  <section><!-- Swiper -->
+  <section>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <style>
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        .swiper-wrapper {
+            display: flex;
+        }
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            box-sizing: border-box;
+            background-color: #ccc; /* Gray background for slides */
+        }
+        .swiper-slide img {
+            max-width: 100%;
+            max-height: 60vh; /* Adjust height as needed */
+            object-fit: cover;
+            display: block;
+        }
+        .swiper-button-next, .swiper-button-prev {
+            background: none; /* Transparent background */
+            color: #fff; /* White icon color */
+            width: 36px;
+            height: 36px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
+            cursor: pointer;
+        }
+        .swiper-button-next::after, .swiper-button-prev::after {
+            content: '';
+            display: block;
+            width: 12px;
+            height: 12px;
+            border-top: 2px solid #fff;
+            border-right: 2px solid #fff;
+        }
+        .swiper-button-next {
+            right: 10px;
+        }
+        .swiper-button-next::after {
+            transform: rotate(45deg);
+        }
+        .swiper-button-prev {
+            left: 10px;
+        }
+        .swiper-button-prev::after {
+            transform: rotate(-135deg);
+        }
+        .swiper-button-next:hover, .swiper-button-prev:hover {
+            color: #bbb; /* Slightly lighter color on hover */
+        }
+        @media screen and (max-width: 768px) {
+            .swiper-button-next, .swiper-button-prev {
+                width: 32px;
+                height: 32px;
+                font-size: 16px;
+            }
+        }
+        @media screen and (max-width: 480px) {
+            .swiper-button-next, .swiper-button-prev {
+                width: 28px;
+                height: 28px;
+                font-size: 14px;
+            }
+        }
+    </style>
+
+
     <div class="swiper-container">
         <div class="swiper-wrapper" id="gallery-wrapper">
-            <!-- Slides will be dynamically added here -->
+            <!-- Slides will be dynamically inserted here -->
         </div>
-        <!-- Add Navigation -->
-        <div class="swiper-button-next"></div>
+        <!-- Navigation buttons -->
         <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
     </div>
 
-    <!-- Swiper JS -->
-    <script type="text/javascript">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
         // Initialize Swiper
         var swiper = new Swiper('.swiper-container', {
             direction: 'horizontal',
@@ -147,14 +229,15 @@ image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhzfR7ipyJpYCO
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
             },
+            lazy: true, // Enable lazy loading
         });
 
         // Label for filtering posts
-        var bcd140526_index_label = 'aylinselvim'; 
+        var label = 'tar orathai'; // Define the label you want to filter
 
         // Function to fetch and display posts
         function loadPosts() {
-            var script_url = `https://www.teteh-ingga.my.id/feeds/posts/default/-/${encodeURIComponent(bcd140526_index_label)}?start-index=1&max-results=6666&alt=json-in-script&callback=displayPosts`;
+            var script_url = `https://gheamelindacantik.blogspot.com/feeds/posts/default/-/${encodeURIComponent(label)}?start-index=1&max-results=6666&alt=json-in-script&callback=displayPosts`;
             var script = document.createElement('script');
             script.src = script_url;
             document.body.appendChild(script);
@@ -167,7 +250,6 @@ image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhzfR7ipyJpYCO
             data.feed.entry.forEach(function(entry) {
                 var thumbnail = entry.media$thumbnail ? entry.media$thumbnail.url : '';
                 var link = entry.link.find(link => link.rel === 'alternate').href;
-                var title = entry.title.$t;
 
                 if (thumbnail) {
                     // Ensure higher resolution image
@@ -176,13 +258,13 @@ image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhzfR7ipyJpYCO
                     } else if (thumbnail.includes('=s72-c')) {
                         thumbnail = thumbnail.replace('=s72-c', '=s1600');
                     }
-                    
+
                     var slide = document.createElement('div');
                     slide.className = 'swiper-slide';
                     slide.innerHTML = `
-                        <a href="${link}" class="slide-link" target="_blank"></a>
-                        <img src="${thumbnail}" alt="${title}" loading="lazy">
-                        <div class="slide-heading">${title}</div>
+                        <a href="${link}" rel="dofollow" class="slide-link" target="_blank">
+                            <img src="${thumbnail}" alt="" loading="lazy">
+                        </a>
                     `;
                     wrapper.appendChild(slide);
                 }
@@ -193,6 +275,7 @@ image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhzfR7ipyJpYCO
 
         loadPosts();
     </script>
+
     
     <p>The traditional Japanese geisha hairstyle is characterized by its elegant, sophisticated updo and decorative hairpieces. This style is perfect for formal events and special occasions, offering a glimpse into historical beauty practices.</p>
     <h4>How to Create:</h4>
@@ -258,4 +341,3 @@ image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhzfR7ipyJpYCO
 
     <h3>Conclusion</h3>
     <p>Exploring global-inspired hairstyles not only allows you to diversify your look but also connects you with beauty traditions from around the world. Whether you’re interested in the intricate braids of Africa or the elegant updos of Japan, these styles offer a unique way to celebrate cultural beauty while enhancing your personal style. Embrace these global trends and make them your own, adding a touch of international flair to your everyday look.</p>
-
