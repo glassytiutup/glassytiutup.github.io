@@ -43,7 +43,93 @@ image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg1MtNua0n3fGJ
 
   <h3>8. Consider Non-Invasive Brightening Procedures</h3>
   <p>For those seeking more immediate results, non-invasive procedures like laser therapy, intense pulsed light (IPL), or radiofrequency treatments can target stubborn pigmentation issues and enhance overall skin tone. These treatments work by stimulating collagen production and reducing discoloration, offering long-lasting brightening effects. While these procedures can be more costly, the results are often significant and worth considering for those invested in their skin's long-term radiance.</p>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <style>
+        .swiper-container {
+            width: 100%;
+            height: auto;
+        }
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .swiper-slide img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        .swiper-button-next, .swiper-button-prev {
+            color: #ffffff80; /* Custom color for navigation buttons */
+        }
+    </style>
 
+
+    <div class="swiper-container">
+        <div class="swiper-wrapper" id="gallery-wrapper">
+            <!-- Slides will be dynamically inserted here -->
+        </div>
+        <!-- Navigation buttons -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+        // Initialize Swiper
+        var swiper = new Swiper('.swiper-container', {
+            direction: 'horizontal',
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            lazy: true, // Enable lazy loading
+        });
+
+        // Label for filtering posts
+        var bcd140526_index_label = 'tar orathai';
+
+        // Function to fetch and display posts
+        function loadPosts() {
+            var script_url = `https://gheamelindacantik.blogspot.com/feeds/posts/default/-/${encodeURIComponent(bcd140526_index_label)}?start-index=1&max-results=6666&alt=json-in-script&callback=displayPosts`;
+            var script = document.createElement('script');
+            script.src = script_url;
+            document.body.appendChild(script);
+        }
+
+        function displayPosts(data) {
+            var wrapper = document.getElementById('gallery-wrapper');
+            wrapper.innerHTML = ''; // Clear existing slides
+
+            data.feed.entry.forEach(function(entry) {
+                var thumbnail = entry.media$thumbnail ? entry.media$thumbnail.url : '';
+                var link = entry.link.find(link => link.rel === 'alternate').href;
+                var title = entry.title.$t;
+
+                if (thumbnail) {
+                    // Ensure higher resolution image
+                    if (thumbnail.includes('/s72-c/')) {
+                        thumbnail = thumbnail.replace('/s72-c/', '/s1600/');
+                    } else if (thumbnail.includes('=s72-c')) {
+                        thumbnail = thumbnail.replace('=s72-c', '=s1600');
+                    }
+
+                    var slide = document.createElement('div');
+                    slide.className = 'swiper-slide';
+                    slide.innerHTML = `
+                        <a href="${link}" class="slide-link" target="_blank"></a>
+                        <img src="${thumbnail}" alt="${title}" loading="lazy">
+                    `;
+                    wrapper.appendChild(slide);
+                }
+            });
+
+            swiper.update(); // Update Swiper after adding slides
+        }
+
+        loadPosts();
+    </script>
   <h3>Conclusion</h3>
   <p>Brightening your skin is not just about achieving short-term glow—it’s about maintaining the health and vitality of your skin for the long run. By investing in high-quality products, practicing healthy lifestyle habits, and seeking professional treatments when necessary, you can achieve radiant skin that lasts. Remember, skincare is a journey, not a race, and consistency is key to unlocking your skin's full potential.</p>
 
