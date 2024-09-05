@@ -2,8 +2,8 @@
 name: "Dorsikret"
 title: "Dorsikret"
 description: "Timeless Beauty, Everyday. Enhance your natural beauty with expert tips, tutorials, and the latest trends. Embrace inner and outer beauty daily."
-logo: 'assets/images/logo.png'
-favicon: 'assets/images/logo.png'
+logo: '/favicon.ico'
+favicon: '/favicon.ico'
 baseurl: /
 google_analytics: 'UA-46278016-1'
 disqus: 'demowebsite'
