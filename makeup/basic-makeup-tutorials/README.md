@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Basic Makeup Tutorials
-permalink: /makeup/basic-makeup-tutorials
+permalink: /makeup/basic-makeup-tutorials/
 ---
 
 
