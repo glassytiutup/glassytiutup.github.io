@@ -400,6 +400,22 @@ color: #800080;
 
 <div class="container">
             <div class="main-content">
+
+
+
+		    <nav aria-label="breadcrumb">
+  <ul class="breadcrumb">
+    <li><a href="/">Home</a></li>
+    {% if page.categories %}
+      {% for category in page.categories %}
+        <li><a href="/{{ category }}/">{{ category }}</a></li>
+      {% endfor %}
+    {% endif %}
+    <li class="active">{{ page.title }}</li>
+  </ul>
+</nav>
+
+		    
       {{ content }}
       
 
