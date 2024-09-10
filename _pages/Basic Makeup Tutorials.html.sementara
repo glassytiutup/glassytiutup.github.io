@@ -1,3 +1,4 @@
+<!--
 ---
 layout: page
 title: Basic Makeup Tutorials
@@ -24,3 +25,5 @@ permalink: /makeup/basic-makeup-tutorials
           {% endfor %}
         </div>
       </div>
+
+-->
