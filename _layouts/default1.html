@@ -403,19 +403,22 @@ color: #800080;
 
 
 
-		    <nav aria-label="breadcrumb">
+	<nav aria-label="breadcrumb">
   <ul class="breadcrumb">
-    <li><a href="/">Home</a></li>
+    <li><a href="{{ site.url }}/">Home</a></li>
+    
     {% if page.categories %}
       {% for category in page.categories %}
-
-	 &nbsp;》   &nbsp;
-	  <li><a href="/{{ category }}/">{{ category }}</a></li> &nbsp;》   &nbsp;
+        <li>
+          <a href="{{ site.url }}/categories/{{ category | downcase | replace: ' ', '-' }}">{{ category }}</a>
+        </li>
       {% endfor %}
     {% endif %}
+    
     <li class="active">{{ page.title }}</li>
   </ul>
-</nav>
+</nav>	    
+		    
 
 		    
       {{ content }}
