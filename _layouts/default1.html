@@ -408,7 +408,9 @@ color: #800080;
     <li><a href="/">Home</a></li>
     {% if page.categories %}
       {% for category in page.categories %}
-        <li><a href="/{{ category }}/">{{ category }}</a></li>
+
+	 &nbsp;》   &nbsp;
+	  <li><a href="/{{ category }}/">{{ category }}</a></li> &nbsp;》   &nbsp;
       {% endfor %}
     {% endif %}
     <li class="active">{{ page.title }}</li>
