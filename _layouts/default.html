@@ -15,7 +15,42 @@
 </script>
 	
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  
+
+<style>
+  #category-posts {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  #category-posts li {
+    margin-bottom: 10px;
+    border: 1px solid #800080;
+	  
+	  border-radius: 10px; 
+	  padding: 5px;
+  }
+
+  #category-posts .post-image {
+    max-width: 100%;
+    height: auto;
+    margin-right: 10px;
+    text-align: center;
+	border-radius: 10px;  
+ border: 1px solid #800080; 
+  }
+
+  #category-posts a {
+    text-decoration: none;
+    color: #800080;
+    font-weight: bold;
+	}
+  #category-posts h2 {
+    text-decoration: none;
+    color: #800080;
+    font-weight: bold;	  
+  }
+</style>
+	
   <!-- alt img -->
   <script type="text/javascript">
     document.addEventListener('DOMContentLoaded', function() {
@@ -82,9 +117,10 @@
         #beauty-sidebar {
             width: 100%;
             background-color: #fff; /* Pink */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.0);
             transition: transform 0.3s ease;
             z-index: 100;
+		padding:5px;
             position: fixed;
             top: 40;
             right: +100%; /* Move sidebar off-screen initially */
@@ -98,7 +134,7 @@
 
         #beauty-sidebar ul {
             list-style-type: none;
-            padding: 0px;
+            padding: 1px;
             margin: 0;
             }
 
@@ -108,21 +144,22 @@
 
         .dropdown-btn {
             display: block;
-            background: none;
-            border: none;
-            padding: 2px 10px;
+            background-color: #800080;
+            border: solid, 1px, white;
+		border-radius:5px;
+            padding: 3px;
             text-align: left;
             width: 100%;
             font-size: 16px;
-            color: #333;
+            color: #fff;
             cursor: pointer;
             outline: none;
             transition: background-color 0.3s, color 0.3s;
         }
 
         .dropdown-btn:hover {
-            background-color: #eee; /* Lighter purple */
-            color: #000;
+            background-color: #800080; 
+            color: #fff;
         }
 
         .dropdown-container {
@@ -134,15 +171,16 @@
             padding: 5px;
             border: solid, 1px, white;
             display: block;
-            color: #111;
-            background: #ddd;
+		border-radius:5px;
+            color: #fff;
+            background-color: #800080;
             text-decoration: none;
             transition: background-color 0.3s, color 0.3s;
         }
 
         .dropdown-container a:hover {
-            background-color: #f9f9f9;
-            color: #555;
+            background-color: #800080;
+            color: #fff;
         }
 
         /* Header styles */
@@ -165,11 +203,11 @@
             position: absolute;
             right: 10px;
             top: 10px;
-            background: none;
+            background-color: #fff;
             border: none;
             font-size: 24px;
             cursor: pointer;
-            color: #fff; /* Dark purple */
+            color: #800080; /* Dark purple */
         }
 	    
 h1 a {
@@ -263,7 +301,7 @@ color: #800080;
 
 
     <!-- Sidebar -->
-    <nav id="beauty-sidebar">
+    <div id="beauty-sidebar">
     	<br /><br /><br />
    
 	    
@@ -337,7 +375,7 @@ color: #800080;
 
 
         <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-    </nav>
+    </div>
     
  
 
@@ -385,7 +423,7 @@ color: #800080;
 
 <br /<br /><br />
 	<div style="padding:10px;">
-<div style="padding:10px; background-color:#800080;">
+<div style="padding:10px; background-color:#800080; border-radius:10px;">
                 {% include search-lunr.html %}
 <div class="mainheading" >
    
@@ -400,11 +438,30 @@ color: #800080;
 
 <div class="container">
             <div class="main-content">
-      {{ content }}
-      
+
+
+
+	<nav aria-label="breadcrumb">
+  <ul class="breadcrumb">
+    <li><a href="{{ site.url }}/">Home</a></li>&nbsp》
+    
+    {% if page.categories %}
+      {% for category in page.categories %}
+        <li>
+          <a href="{{ site.url }}/categories/{{ category | downcase | replace: ' ', '-' }}">{{ category }}</a>
+        </li>&nbsp》
+      {% endfor %}
+    {% endif %}
+    
+    <li class="active">{{ page.title }}</li>
+  </ul>
+</nav>	    
+		    
 
 		    
-      <a id="show_id" onclick="document.getElementById('spoiler_id').style.display=''; document.getElementById('show_id').style.display='none';"></a><span id="spoiler_id" style="display: none;"><a class="link" onclick="document.getElementById('spoiler_id').style.display='none'; document.getElementById('show_id').style.display='';"></a>
+      {{ content }}
+      
+     <a id="show_id" onclick="document.getElementById('spoiler_id').style.display=''; document.getElementById('show_id').style.display='none';"></a><span id="spoiler_id" style="display: none;"><a class="link" onclick="document.getElementById('spoiler_id').style.display='none'; document.getElementById('show_id').style.display='';"></a>
 <div style="background-color: rgba(0, 0, 0, 0); margin: 1px;">
 <div class="smallfont"><i><span style="font-size: 16px; font-weight: bold; margin-right: 3px;"></span></i><input onclick="if (this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display != '') { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = ''; this.innerText = ''; this.value = 'Hide'; } else { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = 'none'; this.innerText = ''; this.value = 'new posts'; }" style="background-color: #00000000; font-size: 16px; width: auto;" type="button" value="new posts" />
 </div>
@@ -438,6 +495,7 @@ color: #800080;
 </div>
 
 	</div></div></div></span>
+		    
       
       
       </div>     </div>
@@ -812,7 +870,7 @@ color: #800080;
         }
     });
 </script><!-- tabunder + url rotator -->
-
+	
 
 
 <!-- social bar -->
@@ -824,7 +882,5 @@ color: #800080;
 		
 		
 	
-	
 </body>
 </html>
-
