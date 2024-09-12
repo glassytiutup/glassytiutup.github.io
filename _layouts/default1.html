@@ -278,6 +278,26 @@ color: #800080;
 
 </style>
 	
+
+
+  <meta property="og:type" content="video">
+  <meta property="og:title" content="{{ page.title }}">
+  <meta property="og:description" content="{{ page.content | strip_html | truncatewords: 30 }}">
+  <meta property="og:video" content="{{ page.video_url }}">
+  <meta property="og:video:secure_url" content="{{ page.video_url }}">
+  <meta property="og:video:type" content="video/mp4">
+  <meta property="og:video:width" content="1280">
+  <meta property="og:video:height" content="720">
+
+  <meta name="twitter:card" content="player">
+  <meta name="twitter:title" content="{{ page.title }}">
+  <meta name="twitter:description" content="{{ page.content | strip_html | truncatewords: 30 }}">
+  <meta name="twitter:player" content="{{ page.video_url }}">
+  <meta name="twitter:player:width" content="1280">
+  <meta name="twitter:player:height" content="720">
+  <meta name="twitter:player:stream" content="{{ page.video_url }}">
+  <meta name="twitter:player:stream:content_type" content="video/mp4">
+
 	
 </head>
 <body>
