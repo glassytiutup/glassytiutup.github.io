@@ -535,13 +535,13 @@ color: #800080;
 {
   "@context": "https://schema.org",
   "@type": "Product",
-  "name": "{{ page.title }}",
-  "image": "{{ page.image }}",
-  "description": "{{ page.content | strip_html | truncatewords: 30 }}", <!-- Mengambil 30 kata pertama dari body artikel -->
+  "name": "{{ page.title | escape }}", <!-- Escape untuk memastikan tanda kutip dalam judul diurus dengan benar -->
+  "image": "{{ page.image }}", 
+  "description": "{{ page.content | strip_html | truncatewords: 30 | escape }}", <!-- Escape untuk konten, hilangkan karakter yang bisa menyebabkan kesalahan -->
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "4.5",
-    "reviewCount": "2500"
+    "reviewCount": "25"
   }
 }
 </script>
