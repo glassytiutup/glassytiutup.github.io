@@ -458,32 +458,25 @@ color: #800080;
 </nav>	    
 		    
 
-      
-    <nav aria-label="Breadcrumb">
-  <ol itemscope itemtype="http://schema.org/BreadcrumbList">
-    <!-- Breadcrumb Home -->
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-      <a href="{{ site.url }}" itemprop="item">
-        <span itemprop="name">Home</span>
+  <nav aria-label="Breadcrumb">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    <!-- Breadcrumb Category -->
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      <a itemprop="item" href="{{ site.url }}/categories/{{ page.category }}">
+        <span itemprop="name">{{ page.category | capitalize }}</span>
       </a>
       <meta itemprop="position" content="1" />
     </li>
     
-    <!-- Breadcrumb Category -->
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-      <a href="{{ site.url }}/categories/{{ page.category }}" itemprop="item">
-        <span itemprop="name">{{ page.category | capitalize }}</span>
-      </a>
-      <meta itemprop="position" content="2" />
-    </li>
-    
     <!-- Breadcrumb Current Page (Post) -->
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
       <span itemprop="name">{{ page.title }}</span>
-      <meta itemprop="position" content="3" />
+      <meta itemprop="position" content="2" />
     </li>
   </ol>
 </nav>
+		    
+    
 		    
       {{ content }}
       
