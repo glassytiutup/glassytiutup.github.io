@@ -531,6 +531,21 @@ color: #800080;
   </ol>
 </nav>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "{{ page.title }}",
+  "image": "{{ page.image }}",
+  "description": "{{ page.content | strip_html | truncatewords: 30 }}", <!-- Mengambil 30 kata pertama dari body artikel -->
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.5",
+    "reviewCount": "2500"
+  }
+}
+</script>
+		    
       {{ content }}
       
 
