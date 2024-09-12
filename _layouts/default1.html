@@ -457,7 +457,26 @@ color: #800080;
   </ul>
 </nav>	    
 		    
-
+<div aria-label="Breadcrumb">
+  <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+      <a href="{{ site.url }}" itemprop="item">
+        <span itemprop="name">Home</span>
+      </a>
+      <meta itemprop="position" content="1" />
+    </li>
+    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+      <a href="{{ site.url }}/categories/{{ page.category }}" itemprop="item">
+        <span itemprop="name">{{ page.category | capitalize }}</span>
+      </a>
+      <meta itemprop="position" content="2" />
+    </li>
+    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+      <span itemprop="name">{{ page.title }}</span>
+      <meta itemprop="position" content="3" />
+    </li>
+  </ol>
+	    </div>
 		    
       {{ content }}
       
