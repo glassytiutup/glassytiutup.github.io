@@ -537,7 +537,7 @@ color: #800080;
   "@type": "Product",
   "name": "{{ page.title | escape }}", <!-- Escape untuk memastikan tanda kutip dalam judul diurus dengan benar -->
   "image": "{{ page.image }}", 
-  "description": "{{ page.content | strip_html | truncatewords: 30 | escape }}", <!-- Escape untuk konten, hilangkan karakter yang bisa menyebabkan kesalahan -->
+  "description": "{{ page.content | strip_html | truncatewords: 30 | escape }}",
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "4.5",
