@@ -491,9 +491,9 @@ color: #800080;
     
     {% if page.tags %}
       {% for tag in page.tags %}
-        <div style="border: 1px solid #800800;border-radius:3px;">🏷&nbsp<li style="background-color:#fff00000; border-radius:2px; padding: 2px">
-          <a href="{{ site.url }}/tags/{{ tag | downcase | replace: ' ', '-' }}">{{ tag }}</a>
-        </li>&nbsp</div>
+        <span style="border: 1px solid #800800;border-radius:3px;">🏷&nbsp<li>
+         <a href="{{ site.url }}/tags/{{ tag | downcase | replace: ' ', '-' }}">{{ tag }}</a>
+        </li>&nbsp</span>&nbsp
       {% endfor %}
     {% endif %}
     
