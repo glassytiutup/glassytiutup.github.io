@@ -492,7 +492,7 @@ color: #800080;
     {% if page.tags %}
       {% for tag in page.tags %}
         <li style="background-color:#fff; border-radius:2px; padding: 2px">
-          <a href="{{ site.url }}/categories/{{ tag | downcase | replace: ' ', '-' }}">{{ tag }}</a>
+          <a href="{{ site.url }}/tags/{{ tag | downcase | replace: ' ', '-' }}">{{ tag }}</a>
         </li>&nbsp
       {% endfor %}
     {% endif %}
