@@ -1,0 +1,25 @@
+name: Push Changes to AvidVerdure11.github.io
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  push_to_blog_b:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout dorsikret.github.io
+      uses: actions/checkout@v3
+
+    - name: Push to AvidVerdure11.github.io
+      run: |
+        git clone https://<PAT>@github.com/AvidVerdure11/AvidVerdure11.github.io.git blogB
+        rsync -av --exclude='.git' ./_posts/ blogB/_posts/
+        cd blogB
+        git config --global user.name "github-actions"
+        git config --global user.email "actions@github.com"
+        git add .
+        git commit -m "Sync content from dorsikret.github.io"
+        git push
