@@ -309,18 +309,6 @@ h1 a {
   
 {% seo %}
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "VideoObject",
-  "name": "{{ page.title }}",
-  "description": "{{ page.title }}",
-  "thumbnailUrl": "{% if page.image contains "://" %}{{ page.image }}{% else %}{{ site.baseurl }}/{{ page.image }}{% endif %}",
-  "uploadDate": "{{ page.date }}",
-  "duration": "PT55M47S",
-  "contentUrl": "https://video.twimg.com/ext_tw_video/1143674758455648262/pu/vid/320x630/fhxIIe2IBzgv6J7T.mp4"
-}
-</script>
 
 	
 	
@@ -359,13 +347,21 @@ color: #800080;
 
 	
 
+<div class="site-content">
 
+<div class="container">
+            <div class="main-content">
+		    
+      {{ content }}
+      
+</div>     </div>
+        </div>
 
 
 	
     <!-- Header -->
     <header id="header">
-<div style="position:absolute;top:10px;left:10px;"><a href="/" ><img alt="" border="0" height="32px" src="/favicon.ico" width="32px" /></a></div><h1 style="position:absolute;top:14px;left:50px;width:15em;font-size:1.5em;padding:0;"><a href="/"><b>{{ site.name }}</b></a></h1>
+<div style="position:absolute;top:10px;left:10px;"><a href="/" ><img alt="" border="0" height="32px" src="/favicon.ico" width="32px" /></a></div><b style="position:absolute;top:14px;left:50px;width:15em;font-size:1.5em;padding:0;"><a href="/">{{ site.name }}</a><b>
 
 
 	    
@@ -507,49 +503,7 @@ color: #800080;
                 </div></div>
 
 	
-            <div class="site-content">
-
-<div class="container">
-            <div class="main-content">
-
-
-
-	<div aria-label="breadcrumb">
-  <ul class="breadcrumb">
-    <li><a href="{{ site.url }}/">Home</a></li>&nbsp》
-    
-    {% if page.categories %}
-      {% for category in page.categories %}
-        <li>
-          <a href="{{ site.url }}/categories/{{ category | downcase | replace: ' ', '-' }}">{{ category }}</a>
-        </li>&nbsp》
-      {% endfor %}
-    {% endif %}
-    
-    <li class="active">{{ page.title }}</li>
-  </ul>
-</div>	    
-		    
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Product",
-  "name": "{{ page.title | escape }}",
-  "image": "{{ page.image }}", 
-  "description": "{{ page.content | strip_html | truncatewords: 30 | escape }}",
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.5",
-    "reviewCount": "2655"
-  }
-}
-</script>
-		    
-      {{ content }}
-      
-
+            
 		
 
 
@@ -567,8 +521,7 @@ color: #800080;
 		    
       
       
-      </div>     </div>
-        </div>
+      
         </div>
     </div>
     
