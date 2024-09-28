@@ -200,9 +200,6 @@
             margin: 0;
             padding: 0;
         }
-h1 {
-font-size: 14px;
-}
         /* Sidebar styles */
         #beauty-sidebar {
             width: 100%;
@@ -367,7 +364,9 @@ color: #800080;
 <span class="layout" ></span>
 
 	
-<br />
+
+
+	
 <div class="site-content">
 
 <div class="container">
@@ -393,9 +392,19 @@ color: #800080;
 
     <!-- Sidebar -->
     <div id="beauty-sidebar">
-    	<br /><br /><br />
    
-	    
+   
+	    <br /<br /><br />
+	<div style="padding:10px;">
+<div style="padding:10px; background-color:#800080; border-radius:10px;">
+                {% include search-lunr.html %}
+<div class="mainheading" >
+   
+    <p style="color:#fff;">
+        {{ site.description }}
+    </p> 
+</div>
+                </div></div>
 	    
 	    <ul>
            
@@ -512,19 +521,7 @@ color: #800080;
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"/>
 	</noscript>
 
-<br /<br /><br />
-	<div style="padding:10px;">
-<div style="padding:10px; background-color:#800080; border-radius:10px;">
-                {% include search-lunr.html %}
-<div class="mainheading" >
-   
-    <p style="color:#fff;">
-        {{ site.description }}
-    </p> 
-</div>
-                </div></div>
 
-	
             
 		
 
