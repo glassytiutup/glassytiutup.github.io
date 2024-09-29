@@ -1,6 +1,6 @@
 # Site
-name: "Dorsikret"
-title: "Dorsikret"
+name: "Glassytiutup"
+title: "Glassytiutup"
 description: "Timeless Beauty, Everyday. Enhance your natural beauty with expert tips, tutorials, and the latest trends. Embrace inner and outer beauty daily."
 logo: '/favicon.ico'
 favicon: '/favicon.ico'
@@ -48,7 +48,7 @@ jekyll-archives:
     category: '/category/:name/'
     
 # Pagination 
-paginate: 10
+paginate: 8
 paginate_path: /page:num/
     
 # Other
